@@ -1,0 +1,1887 @@
+1
+Advisor	Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.091	Concentration		Undergraduate Student Attributes	Health Insurance Assigned
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  120
+ 	 	Credits Applied:	  61
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 61 credits,  you still need a minimum of 59 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Not yet complete		GENERAL EDUCATION AND WORLD LANGUAGES & CULTURES REQUIREMENTS
+Not yet complete		General Education
+Still Needed:	See General Education, BFA section
+Not yet complete		World Languages & Cultures
+Still Needed:	See World Languages & Cultures, BFA section
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Not yet complete	General Education, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  22
+ 	 	Credits Applied:	  19
+Unmet conditions for this set of requirements:	You currently have 19 credits,  you still need 3 more credits. 
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 27	New Student Seminar	B- 	1	FALL 2024
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 AG	College Writing I	A- 	3	FALL 2024
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 136	College Writing II	B+ 	3	SPRING 2025
+Complete except for in-progress classes		(C3) COMMUNICATION: COMMUNICATION
+Complete except for in-progress classes		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 43	Fund Speech:Comm Requirement	REG 	(3)	SPRING 2026
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 285 17	Mythology	A- 	3	FALL 2025
+Not yet complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Not yet complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute GEF2
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 104 02	Python Programming I	C+ 	3	FALL 2025
+Complete except for in-progress classes		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete except for in-progress classes		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HUMN 281 02	Greek Civilization	REG 	(3)	SPRING 2026
+Not yet complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  3
+ 	 	Credits Applied:	  0
+Unmet conditions for this set of requirements:	You currently have 0 credits, you still need at least 3 more credits. 
+Not yet complete		WORLD CULTURES
+Not yet complete		World Cultures courses
+Still Needed:	1 Class in @ @   with Attribute WCR
+Not yet complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Not yet complete		World Language
+Still Needed:	Choose from 1 of the following:
+Not yet complete		American Sign Language
+	( 2 Classes in AMSL 101 or 102 ) or
+Not yet complete		American Sign Language
+	( 2 Classes in AMSL 102 or 201 ) or
+Not yet complete		Arabic: Beginner
+	( 2 Classes in ARAB 101 or 112 ) or
+Not yet complete		Arabic: Beginner II
+	( 2 Classes in ARAB 112 or 121 ) or
+Not yet complete		Chinese: Beginner
+	( 2 Classes in CHIN 101 or 112 ) or
+Not yet complete		Chinese: Beginner II
+	( 2 Classes in CHIN 112 or 121 ) or
+Not yet complete		English as a Second Language: Beginner
+	( 2 Classes in ESOL 172 or 173 ) or
+Not yet complete		French: Beginner
+	( 2 Classes in FREN 101 or 112 ) or
+Not yet complete		French: Beginner II
+	( 2 Classes in FREN 112 or 121 ) or
+Not yet complete		German: Beginner
+	( 2 Classes in GERM 101 or 102 ) or
+Not yet complete		German: Beginner II
+	( 2 Classes in GERM 102 or 121 ) or
+Not yet complete		Greek: Beginner
+	( 2 Classes in GREK 101 or 102 ) or
+Not yet complete		Greek: Beginner II
+	( 2 Classes in GREK 102 or 201 ) or
+Not yet complete		Hebrew: Beginner
+	( 2 Classes in HEBR 101 or 112 ) or
+Not yet complete		Hebrew: Beginner II
+	( 2 Classes in HEBR 112 or 121 ) or
+Not yet complete		Italian: Beginner
+	( 2 Classes in ITAL 101 or 102 ) or
+Not yet complete		Italian: Beginner II
+	( 2 Classes in ITAL 102 or 103 ) or
+Not yet complete		Italian: Comprehensive Beginner
+	( 2 Classes in ITAL 111 or 140 ) or
+Not yet complete		Japanese: Beginner
+	( 2 Classes in JAPN 101 or 112 ) or
+Not yet complete		Japanese: Beginner II
+	( 2 Classes in JAPN 112 or 121 ) or
+Not yet complete		Korean: Beginner
+	( 2 Classes in KORE 101 or 102 ) or
+Not yet complete		Korean: Beginner II
+	( 2 Classes in KORE 102 or 121 ) or
+Not yet complete		Latin: Beginner
+	( 2 Classes in LATN 101 or 102 ) or
+Not yet complete		Intensive Beginning Latin
+	( 1 Class in LATN 150 ) or
+Not yet complete		Latin: Beginner II
+	( 2 Classes in LATN 102 or 205 ) or
+Not yet complete		Portuguese: Beginner
+	( 2 Classes in PORT 101 or 102 ) or
+Not yet complete		Portuguese: Beginner II
+	( 2 Classes in PORT 102 or 103 ) or
+Not yet complete		Russian: Beginner
+	( 2 Classes in RUSS 101 or 102 ) or
+Not yet complete		Russian: Beginner II
+	( 2 Classes in RUSS 102 or 121 ) or
+Not yet complete		Spanish: Beginner (Option 1)
+	( 2 Classes in SPAN 101 or 102 ) or
+Not yet complete		Spanish: Beginner (Option 2)
+	( 2 Classes in SPAN 105 or 106 ) or
+Not yet complete		SPANISH: BEGINNER
+	( You must complete all of the following: ) or
+Not yet complete		Spanish: Beginner II
+	( 2 Classes in SPAN 102 or 103 )
+Not yet complete		Intermediate/Advanced Language
+	( 1 Class in AMSL 201 or 202 or 301 or 302 or ARAB 121 or 132 or 203 or 204 or 351 or CHIN 121 or 132 or 303 or 410 or ESOL 172 or 173 or FREN 121 or 132 or 203 or 204 or GERM 115 or 121 or 132 or 201 or 202 or GREK 201 or 202 or HEBR 121 or 132 or 151 or 152 or 201 or ITAL 103 or 104 or 140 or 242 or 243 or JAPN 121 or 132 or 251 or 252 or 301 or 401 or KORE 121 or 132* or 201 or 206 or 308 or 331 or 375 or 410 or LATN 205 or 206 or PORT 103 or 104 or RUSS 121 or 132 or 201 or 202 or SPAN 103 or 104 or 107 or 140 or 134 or 135 or 145 or 236 or 241 or 242 or WLNC 368 )
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  69
+GPA:	  3.045	Credits Applied:	  42
+Unmet conditions for this set of requirements:	You currently have 42 credits,  you still need 27 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 09	Intro to Comm and Media	C- 	3	FALL 2024
+Complete		Theorizing Comm and Media
+CMST 210 01	Theorizing Comm and Media	C+ 	3	SPRING 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	B- 	3	FALL 2024
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A- 	3	FALL 2024
+Complete		Intro Animation & VFX
+ANIM 103 03	Intro Animation & VFX	C+ 	3	FALL 2024
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A- 	3	SPRING 2025
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	A- 	3	SPRING 2025
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	SPRING 2025
+Complete		Visual Effects Compositing I
+ANIM 210 02	Visual Effects Compositing I	A- 	3	FALL 2025
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	B 	3	FALL 2025
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	B- 	3	FALL 2025
+Complete except for in-progress classes		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	REG 	(3)	SPRING 2026
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Complete except for in-progress classes		300-Level Electives
+ANIM 302 01	3D Modeling II	REG 	(3)	SPRING 2026
+ANIM 331 01	Experimental Animation	REG 	(3)	SPRING 2026
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+Still Needed:	2 Classes in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+
+  In-progress	
+Credits Applied:	15	Classes Applied:	5
+ANIM 302	3D Modeling II	REG 	3	SPRING 2026
+ANIM 325	Interactive Game Development I	REG 	3	SPRING 2026
+ANIM 331	Experimental Animation	REG 	3	SPRING 2026
+CMST 101	Fund Speech:Comm Requirement	REG 	3	SPRING 2026
+HUMN 281	Greek Civilization	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+2
+
+Advisors	Morales, Victor 
+Pecora, Melissa 
+Ho, Wing Shan 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.735	Concentration		Undergraduate Student Attributes	Educational Opportunity Fund
+Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor	Japanese	Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  120
+ 	 	Credits Applied:	  84
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 84 credits,  you still need a minimum of 36 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Not yet complete		GENERAL EDUCATION AND WORLD LANGUAGES & CULTURES REQUIREMENTS
+Not yet complete		General Education
+Still Needed:	See General Education, BFA section
+Not yet complete		World Languages & Cultures
+Still Needed:	See World Languages & Cultures, BFA section
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Not yet complete	General Education, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  22
+ 	 	Credits Applied:	  19
+Unmet conditions for this set of requirements:	You currently have 19 credits,  you still need 3 more credits. 
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 27	New Student Seminar	A 	1	FALL 2024
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 AG	College Writing I	A 	3	FALL 2024
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 	College Writing II	TB+ 	3	FALL 2024
+Satisfied by	ENG141 - ENGLISH COMPOSITION II - Warren County Cmty College
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 31	Fund Speech:Comm Requirement	C+ 	3	SUMMER 2024
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+VIST 105 01	Global Foundations	A 	3	SPRING 2025
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+RELG 100 06	Religions of the World	A 	3	SPRING 2025
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 104 02	Python Programming I	B 	3	FALL 2025
+Not yet complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Not yet complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute GEK1
+Not yet complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  3
+ 	 	Credits Applied:	  6
+Not yet complete		WORLD CULTURES
+Not yet complete		World Cultures courses
+Still Needed:	1 Class in @ @   with Attribute WCR
+Complete except for in-progress classes		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete except for in-progress classes		World Language
+Complete except for in-progress classes		Japanese: Beginner
+JAPN 101 04	Beginning Japanese I	A 	3	FALL 2025
+JAPN 112 02	Beginning Japanese II	REG 	(3)	SPRING 2026
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  69
+GPA:	  3.810	Credits Applied:	  39
+Unmet conditions for this set of requirements:	You currently have 39 credits,  you still need 30 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 09	Intro to Comm and Media	A 	3	FALL 2024
+Complete		Theorizing Comm and Media
+CMST 210 02	Theorizing Comm and Media	B 	3	FALL 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	A- 	3	FALL 2024
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A 	3	FALL 2024
+Complete		Intro Animation & VFX
+ANIM 103 03	Intro Animation & VFX	A- 	3	FALL 2024
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2025
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	A- 	3	SPRING 2025
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	SPRING 2025
+Complete		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	A 	3	FALL 2025
+Complete except for in-progress classes		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	REG 	(3)	SPRING 2026
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	A 	3	FALL 2025
+Complete except for in-progress classes		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	REG 	(3)	SPRING 2026
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Not yet complete		300-Level Electives
+ANIM 302 01	3D Modeling II	REG 	(3)	SPRING 2026
+Still Needed:	1 Class in ANIM 301 or 330 or 331 or 335 or 351 or 370
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+Still Needed:	2 Classes in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+Not yet complete	Minor in Japanese	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  18
+GPA:	  4.000	Credits Applied:	  6
+Unmet conditions for this set of requirements:	You currently have 6 credits,  you still need 12 more credits. 
+Complete		Beginning Japanese I
+JAPN 101 04	Beginning Japanese I	A 	3	FALL 2025
+Complete except for in-progress classes		Beginning Japanese II
+JAPN 112 02	Beginning Japanese II	REG 	(3)	SPRING 2026
+Not yet complete		Intermediate Japanese I
+Still Needed:	1 Class in JAPN 121
+Not yet complete		Intermediate Japanese II
+Still Needed:	1 Class in JAPN 132
+Not yet complete		Electives
+Still Needed:	2 Classes in JAPN 206 or 207 or 208 or 209 or 251 or 252 or 301 or 375 or 401 or WLNC 368
+Only 3 credits of JAPN 375 (Study Abroad) can count toward the minor electives requirement. 
+
+  Free Electives	
+Credits Applied:	20	Classes Applied:	6
+BIOL 100	BIOLOGICAL SCIENCES	TA 	4	FALL 2024
+Satisfied by:   BIO145 - PRINCIPLES OF BIOLOGY - Warren County Cmty College
+MATH 100	Math for Business and Social S	TA 	3	FALL 2024
+Satisfied by:   MAT131 - COLLEGE ALGEBRA - Warren County Cmty College
+MATH 122	CALCULUS I	TA 	4	FALL 2024
+Satisfied by:   MAT201 - CALCULUS I - Warren County Cmty College
+MGMT TRN	MGMT TRANSFER CREDIT	TA 	3	FALL 2024
+Satisfied by:   BUS120 - BUSINESS ORGANIZATION AND MANA - Warren County Cmty College
+SOCI 100	Introduction to Sociology	A 	3	SUMMER 2024
+TRNS FE2	FREE ELECTIVE	TA 	3	FALL 2024
+Satisfied by:   MAT141 - PRE-CALCULUS - Warren County Cmty College
+  In-progress	
+Credits Applied:	12	Classes Applied:	4
+ANIM 282	History of Animation and VFX	REG 	3	SPRING 2026
+ANIM 302	3D Modeling II	REG 	3	SPRING 2026
+ANIM 325	Interactive Game Development I	REG 	3	SPRING 2026
+JAPN 112	Beginning Japanese II	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    20  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+3.
+Advisor	Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.382	Concentration		Undergraduate Student Attributes	Health Insurance Assigned
+Honors Program
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor	Creative Writing	Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  120
+ 	 	Credits Applied:	  97
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 97 credits,  you still need a minimum of 23 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		General Education Requirements
+Not yet complete		World Languages & Cultures Requirements
+Still Needed:	See World Languages & Cultures, BFA section
+Complete except for in-progress classes		Honors Program Requirements
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Complete	General Education, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  22
+ 	 	Credits Applied:	  22
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 116	New Student Seminar	A 	1	FALL 2023
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+HONP 100 08	Honor Sem:Great Books/Ideas I	A 	3	FALL 2023
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+HONP 101 05	Honor Sem:Great Books/Ideas II	A 	3	SPRING 2024
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 16	Fund Speech:Comm Requirement	A 	3	FALL 2024
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 285 18	Mythology	A- 	3	SPRING 2025
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+HONP 301 14	Honor Sem:Ways of Knowing	A 	3	FALL 2024
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+HONP 105 01	Honors Seminar in Computing	C+ 	3	FALL 2025
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HONP 102 07	Honor Sem:20th C Civilization	A 	3	FALL 2023
+Not yet complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  3
+ 	 	Credits Applied:	  6
+Not yet complete		WORLD CULTURES
+Not yet complete		World Cultures courses
+Still Needed:	1 Class in @ @   with Attribute WCR
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		American Sign Language
+AMSL 101 05	Beginning Amer Sign Language I	A 	3	FALL 2024
+AMSL 102 22	Beginning Amer Sign Lang II	A 	3	SPRING 2025
+Complete except for in-progress classes	Honors Program	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  24
+ 	 	Credits Applied:	  24
+Complete		REQUIRED COURSES
+Complete		Honor Sem:Great Books/Ideas I
+HONP 100 08	Honor Sem:Great Books/Ideas I	A 	3	FALL 2023
+Complete		Honor Sem:Great Books/Ideas II
+HONP 101 05	Honor Sem:Great Books/Ideas II	A 	3	SPRING 2024
+Complete		Global Honors Seminar
+HONP 102 07	Honor Sem:20th C Civilization	A 	3	FALL 2023
+Complete		Interdisciplinary Honors Sem
+HONP 103 02	Honors Sem in Contem Civ	C 	3	SPRING 2024
+Complete except for in-progress classes		ELECTIVES
+Complete except for in-progress classes		Complete 4 Elective courses.
+Complete		Honors Seminar in Computing
+HONP 105 01	Honors Seminar in Computing	C+ 	3	FALL 2025
+Complete except for in-progress classes		Creativity
+HONP 106 03	Creativity	REG 	(3)	SPRING 2026
+Complete		Honor Sem:Ways of Knowing
+HONP 301 14	Honor Sem:Ways of Knowing	A 	3	FALL 2024
+Complete		Honors Special Topics
+HONP 310 01	Honors Special Topics	A- 	3	SPRING 2025
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  69
+GPA:	  3.407	Credits Applied:	  54
+Unmet conditions for this set of requirements:	You currently have 54 credits,  you still need 15 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 03	Intro to Comm and Media	A 	3	FALL 2023
+Complete		Theorizing Comm and Media
+CMST 210 04	Theorizing Comm and Media	B 	3	SPRING 2024
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 03	Drawing Anatomy for Animation	A 	3	FALL 2023
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A 	3	SPRING 2024
+Complete		Intro Animation & VFX
+ANIM 103 04	Intro Animation & VFX	A 	3	FALL 2023
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2024
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	A 	3	FALL 2024
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	FALL 2024
+Complete		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	C- 	3	SPRING 2025
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	C 	3	FALL 2025
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	B+ 	3	SPRING 2025
+Complete		Interactive Game Development I
+ANIM 325 02	Interactive Game Development I	B 	3	FALL 2025
+Complete except for in-progress classes		VFX, Lighting, and Rendering
+ANIM 360 01	VFX, Lighting, and Rendering	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		VFX for Film
+ANIM 380 01	VFX for Film	REG 	(3)	SPRING 2026
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Complete except for in-progress classes		300-Level Electives
+ANIM 301 01	2D Animation and VFX II	REG 	(3)	SPRING 2026
+ANIM 351 01	Animated Devel & Pitch Bible	B 	3	FALL 2025
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Complete except for in-progress classes		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Complete except for in-progress classes		SCM Elective Courses
+FMTV 205 01	Film Art:Historical & Contemp	REG 	(3)	SPRING 2026
+FMTV 210 04	Intro to Screenwriting	A- 	3	FALL 2025
+Not yet complete	Minor in Creative Writing	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  18
+GPA:	  3.700	Credits Applied:	  9
+Unmet conditions for this set of requirements:	You currently have 9 credits,  you still need 9 more credits. 
+400-level fiction and poetry workshops are only offered once every Spring semester. Please plan ahead. 
+Not yet complete		GENRE OPTIONS (SELECT ONE)
+Still Needed:	Choose from 1 of the following:
+Students may select either ENFL 310 or FILM 310. Students may select either ENFL 410 or FILM 410. 
+Not yet complete		FICTION
+	( You must complete all of the following: ) or
+Not yet complete		Fiction
+ENWR 213 01	Intro to Fiction Writing	A- 	3	SPRING 2025
+ENWR 311 01	Intermediate Fiction Workshop	REG 	(3)	SPRING 2026
+	( 1 Class in ENWR 411 ) and
+Not yet complete		Literature in Fiction
+	( 1 Class in ENGL 161 or 227 or 235 or 237 or 238 or 255 or 256 or 262 or 274 or 279 or 301 or 305 or 308 or 336 or 337 or 338 or 339 or 340 or 341 or 342 or 349 or 350 or 356 or 357 or 358 or 359 or 390 or 393 or 456 or 376 or 377 or 378 ) and
+Not yet complete		Other Creative Writing Workshops
+FMTV 210 04	Intro to Screenwriting	A- 	3	FALL 2025
+	( 1 Class in ARST 303 or ENFL 310 or 410 or ENWR 205 or 212 or 215 or 312 or 318 or 412 or FMTV 310 or 410 or THTR 391 )
+Not yet complete		POETRY
+	( You must complete all of the following: )
+Not yet complete		Poetry
+	( 3 Classes in ENWR 212 and 312 and 412 ) and
+Not yet complete		Literature in Poetry
+	( 1 Class in ENGL 228 or 240 or 241 or 243 or 260 or 294 or 324 or 325 or 326 or 330 or 343 or 344 or 345 or 346 or 347 or 348 or 364 or 365 or 444 or 363 ) and
+Not yet complete		Other Creative Writing Workshops
+	( 2 Classes in ARST 303 or ENFL 310 or 410 or ENWR 205 or 213 or 215 or 311 or 318 or 411 or FMTV 210 or 310 or 410 or THTR 391 )
+
+  Work Not Applicable to Program	
+Credits Applied:	0	Classes Applied:	1
+ANTH 255	Urban Anthropology	F 	0	FALL 2025
+  In-progress	
+Credits Applied:	18	Classes Applied:	6
+ANIM 301	2D Animation and VFX II	REG 	3	SPRING 2026
+ANIM 360	VFX, Lighting, and Rendering	REG 	3	SPRING 2026
+ANIM 380	VFX for Film	REG 	3	SPRING 2026
+ENWR 311	Intermediate Fiction Workshop	REG 	3	SPRING 2026
+FMTV 205	Film Art:Historical & Contemp	REG 	3	SPRING 2026
+HONP 106	Creativity	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+4.
+Advisor	Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.711	Concentration		Undergraduate Student Attributes	Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  120
+ 	 	Credits Applied:	  94
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 94 credits,  you still need a minimum of 26 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		General Education Requirements
+Complete		World Languages & Cultures Requirements
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Complete	General Education, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  22
+ 	 	Credits Applied:	  22
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 116	New Student Seminar	A 	1	FALL 2023
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 66	College Writing I	B+ 	3	FALL 2023
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 129	College Writing II	B+ 	3	SPRING 2024
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 44	Fund Speech:Comm Requirement	A 	3	FALL 2024
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 285 15	Mythology	A- 	3	SPRING 2024
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+RELG 101 10	Understanding Religion	A 	3	FALL 2023
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 100 46	Intro to Computer Concepts	A 	3	SPRING 2024
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HIST 106 01	Contemporary Europe	B+ 	3	SPRING 2025
+Complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete		WORLD CULTURES
+Complete		World Cultures courses
+ANTH 100 07	Cultural Anthropology	A 	3	FALL 2024
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		American Sign Language
+AMSL 101 07	Beginning Amer Sign Language I	A- 	3	SPRING 2025
+AMSL 102 05	Beginning Amer Sign Lang II	A 	3	FALL 2025
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  69
+GPA:	  3.673	Credits Applied:	  54
+Unmet conditions for this set of requirements:	You currently have 54 credits,  you still need 15 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 12	Intro to Comm and Media	A- 	3	FALL 2023
+Complete		Theorizing Comm and Media
+CMST 210 04	Theorizing Comm and Media	B 	3	SPRING 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 03	Drawing Anatomy for Animation	A 	3	FALL 2023
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A 	3	SPRING 2024
+Complete		Intro Animation & VFX
+ANIM 103 04	Intro Animation & VFX	A 	3	FALL 2023
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2024
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	A- 	3	FALL 2024
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	SPRING 2024
+Complete		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	A 	3	SPRING 2025
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	A 	3	FALL 2025
+Complete		3D Animation and Rigging
+ANIM 321 02	3D Animation and Rigging I	A 	3	FALL 2024
+Complete		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	B- 	3	SPRING 2025
+Complete		VFX, Lighting, and Rendering
+ANIM 360 01	VFX, Lighting, and Rendering	B 	3	FALL 2025
+Complete		VFX for Film
+ANIM 380 01	VFX for Film	B+ 	3	FALL 2025
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Complete except for in-progress classes		300-Level Electives
+ANIM 301 01	2D Animation and VFX II	REG 	(3)	SPRING 2026
+ANIM 302 01	3D Modeling II	REG 	(3)	SPRING 2026
+Not yet complete		400-Level Electives
+ANIM 425 02	Interactive Game Dev II	REG 	(3)	SPRING 2026
+Still Needed:	1 Class in ANIM 400 or 421 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+FMTV 210 07	Intro to Screenwriting	A- 	3	FALL 2024
+Still Needed:	1 Class in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+
+  Free Electives	
+Credits Applied:	9	Classes Applied:	3
+ARFD 101	PROCESS AND MEDIA I - SURFACE	TP 	3	FALL 2023
+Satisfied by:   ARTDESIGNEXAM - Art 2D Design - AP Exam
+ARIL 261	Character Design	A 	3	FALL 2025
+ARIL 314	Children's Book	REG 	3	SPRING 2026
+  In-progress	
+Credits Applied:	12	Classes Applied:	4
+ANIM 301	2D Animation and VFX II	REG 	3	SPRING 2026
+ANIM 302	3D Modeling II	REG 	3	SPRING 2026
+ANIM 425	Interactive Game Dev II	REG 	3	SPRING 2026
+ARIL 314	Children's Book	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    3  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+5.
+	Morales, Victor 
+White, Angela 
+Ho, Wing Shan 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.836	Concentration		Undergraduate Student Attributes	Commuter Meal Plan Deposit
+Educational Opportunity Fund
+Health Insurance Assigned
+Honors Program
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor	Japanese	Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  120
+ 	 	Credits Applied:	  74
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 74 credits,  you still need a minimum of 46 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Not yet complete		GENERAL EDUCATION AND WORLD LANGUAGES & CULTURES REQUIREMENTS
+Not yet complete		General Education
+Still Needed:	See General Education, BFA section
+Not yet complete		World Languages & Cultures
+Still Needed:	See World Languages & Cultures, BFA section
+Not yet complete		Honors Program Requirements
+Still Needed:	See Honors Program section
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Not yet complete	General Education, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  22
+ 	 	Credits Applied:	  20
+Unmet conditions for this set of requirements:	You currently have 20 credits,  you still need 2 more credits. 
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 27	New Student Seminar	A 	1	FALL 2024
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 26	College Writing I	A 	3	SPRING 2025
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 14	College Writing II	A 	4	FALL 2025
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 58	Fund Speech:Comm Requirement	A 	3	SPRING 2025
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+VIST 105 03	Global Foundations	A 	3	FALL 2025
+Complete except for in-progress classes		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete except for in-progress classes		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+RELG 100 13	Religions of the World	REG 	(3)	SPRING 2026
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 104 04	Python Programming I	A- 	3	SPRING 2025
+Not yet complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Not yet complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute GEK1
+Not yet complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  3
+ 	 	Credits Applied:	  3
+Not yet complete		WORLD CULTURES
+Not yet complete		World Cultures courses
+Still Needed:	1 Class in @ @   with Attribute WCR
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		Intermediate/Advanced Language
+SPAN 104 	SPANISH IV	TP 	3	FALL 2024
+Satisfied by	SPANLANG4/5EXAM - Spanish Language 4/5 - AP Exam
+Not yet complete	Honors Program	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  24
+ 	 	Credits Applied:	  6
+Unmet conditions for this set of requirements:	You currently have 6 credits, you still need at least 18 more credits. 
+A minimum of six HONP classes must be completed 
+Not yet complete		REQUIRED COURSES
+Not yet complete		Creativity
+Still Needed:	1 Class in HONP 106
+Complete		Community Matters
+HONP 107 01	Community Matters	A 	3	FALL 2024
+Not yet complete		Transformations
+Still Needed:	1 Class in HONP 108
+Not yet complete		Honors Capstone
+Still Needed:	1 Class in HONP 490
+Not yet complete		ELECTIVES
+Not yet complete		Complete 12 Credits of Electives
+HONP 310 02	Honors Special Topics	A- 	3	FALL 2025
+Still Needed:	9 Credits in HONP 104 or 105 or 210 or 302 or 201 or 202 or 211 or 301
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  69
+GPA:	  3.744	Credits Applied:	  39
+Unmet conditions for this set of requirements:	You currently have 39 credits,  you still need 30 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 09	Intro to Comm and Media	A- 	3	FALL 2024
+Complete		Theorizing Comm and Media
+CMST 210 06	Theorizing Comm and Media	A- 	3	SPRING 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	A 	3	FALL 2024
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A- 	3	FALL 2024
+Complete		Intro Animation & VFX
+ANIM 103 03	Intro Animation & VFX	B+ 	3	FALL 2024
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2025
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	B+ 	3	FALL 2025
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	SPRING 2025
+Complete except for in-progress classes		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	REG 	(3)	SPRING 2026
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	A 	3	FALL 2025
+Complete except for in-progress classes		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	REG 	(3)	SPRING 2026
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Not yet complete		300-Level Electives
+ANIM 302 01	3D Modeling II	REG 	(3)	SPRING 2026
+Still Needed:	1 Class in ANIM 301 or 330 or 331 or 335 or 351 or 370
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+Still Needed:	2 Classes in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+Not yet complete	Minor in Japanese	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  18
+GPA:	  4.000	Credits Applied:	  6
+Unmet conditions for this set of requirements:	You currently have 6 credits,  you still need 12 more credits. 
+Complete		Beginning Japanese I
+JAPN 101 04	Beginning Japanese I	A 	3	FALL 2025
+Complete except for in-progress classes		Beginning Japanese II
+JAPN 112 01	Beginning Japanese II	REG 	(3)	SPRING 2026
+Not yet complete		Intermediate Japanese I
+Still Needed:	1 Class in JAPN 121
+Not yet complete		Intermediate Japanese II
+Still Needed:	1 Class in JAPN 132
+Not yet complete		Electives
+Still Needed:	2 Classes in JAPN 206 or 207 or 208 or 209 or 251 or 252 or 301 or 375 or 401 or WLNC 368
+Only 3 credits of JAPN 375 (Study Abroad) can count toward the minor electives requirement. 
+
+  In-progress	
+Credits Applied:	18	Classes Applied:	6
+ANIM 210	Visual Effects Compositing I	REG 	3	SPRING 2026
+ANIM 282	History of Animation and VFX	REG 	3	SPRING 2026
+ANIM 302	3D Modeling II	REG 	3	SPRING 2026
+ANIM 325	Interactive Game Development I	REG 	3	SPRING 2026
+JAPN 112	Beginning Japanese II	REG 	3	SPRING 2026
+RELG 100	Religions of the World	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    3  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+6.
+Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.628	Concentration		Undergraduate Student Attributes	Commuter Meal Plan Deposit
+Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum	Arts, Culture & Design	Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  120
+ 	 	Credits Applied:	  79
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 79 credits,  you still need a minimum of 41 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		General Education Requirements
+Complete		World Languages & Cultures Requirements
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Complete	General Education, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  22
+ 	 	Credits Applied:	  22
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 08	New Student Seminar	A 	1	FALL 2023
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 73	College Writing I	C+ 	3	FALL 2023
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 BR	College Writing II	A 	3	SPRING 2024
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 26	Fund Speech:Comm Requirement	C- 	3	FALL 2023
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+VIST 105 01	Global Foundations	B 	3	FALL 2023
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+PHIL 100 08	Intro to Philosophy	B 	3	FALL 2024
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 100 17	Intro to Computer Concepts	A- 	3	FALL 2024
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HIST 118 23	History of U.S. Since 1876	A 	3	SPRING 2024
+Complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete		WORLD CULTURES
+Complete		World Cultures courses
+MUGN 109 03	Introduction to Jazz	A 	3	FALL 2025
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		French: Beginner
+FREN 101 05	Beginning French I	B+ 	3	FALL 2023
+FREN 112 05	Beginning French II	A 	3	SPRING 2025
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  69
+GPA:	  3.957	Credits Applied:	  30
+Unmet conditions for this set of requirements:	You currently have 30 credits,  you still need 39 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 07	Intro to Comm and Media	A 	3	SPRING 2024
+Complete		Theorizing Comm and Media
+CMST 210 03	Theorizing Comm and Media	A 	3	FALL 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	A- 	3	SPRING 2024
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A 	3	SPRING 2025
+Complete		Intro Animation & VFX
+ANIM 103 01	Intro Animation & VFX	A 	3	FALL 2025
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	FALL 2024
+Complete except for in-progress classes		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		3D Modeling I
+ANIM 202 01	3D Modeling I	REG 	(3)	SPRING 2026
+Not yet complete		Visual Effects Compositing I
+Still Needed:	1 Class in ANIM 210
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	A 	3	FALL 2025
+Not yet complete		3D Animation and Rigging
+Still Needed:	1 Class in ANIM 321
+Not yet complete		Interactive Game Development I
+Still Needed:	1 Class in ANIM 325
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Not yet complete		300-Level Electives
+Still Needed:	2 Classes in ANIM 301 or 302 or 330 or 331 or 335 or 351 or 370
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+CMST 201 02	Fund of Comm & Media Studies	REG 	(3)	SPRING 2026
+Still Needed:	1 Class in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+
+  Free Electives	
+Credits Applied:	18	Classes Applied:	6
+ARFD 100	Perceptual Drawing	A- 	3	FALL 2023
+ENFL 208	Introduction to the Film	B+ 	3	SPRING 2025
+FSHD 214	Child Development I	REG 	3	SPRING 2026
+MUGN 100	Introduction to Music	A 	3	SPRING 2025
+PSYC 101	Introduction to Psychology	A 	3	SPRING 2025
+VIST 109	Special Topics-Global Art Cult	A 	3	FALL 2024
+  In-progress	
+Credits Applied:	12	Classes Applied:	4
+ANIM 201	2D Animation and VFX I	REG 	3	SPRING 2026
+ANIM 202	3D Modeling I	REG 	3	SPRING 2026
+CMST 201	Fund of Comm & Media Studies	REG 	3	SPRING 2026
+FSHD 214	Child Development I	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+7.
+
+Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.554	Concentration		Undergraduate Student Attributes	Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  120
+ 	 	Credits Applied:	  97
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 97 credits,  you still need a minimum of 23 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		General Education Requirements
+Complete		World Languages & Cultures Requirements
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Complete	General Education, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  22
+ 	 	Credits Applied:	  22
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 116	New Student Seminar	A 	1	FALL 2023
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 AT	College Writing I	A 	3	FALL 2023
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 08	College Writing II	A 	3	SPRING 2024
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 47	Fund Speech:Comm Requirement	B+ 	3	FALL 2024
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 115 10	Troy and the Trojan War	A 	3	FALL 2025
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+RELG 101 12	Understanding Religion	A 	3	FALL 2023
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+INFO 173 10	Spreadsheet Modeling - Bus Dec	A 	3	SPRING 2025
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HIST 110 01	Intro to American Studies	B 	3	SPRING 2024
+Complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete		WORLD CULTURES
+Complete		World Cultures courses
+ANTH 100 20	Cultural Anthropology	A- 	3	FALL 2024
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		SPANISH: BEGINNER
+Complete		Spanish: Beginner II
+SPAN 102 04	Spanish II	A 	3	FALL 2025
+SPAN 101 13	Spanish I	B+ 	3	SPRING 2025
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  69
+GPA:	  3.479	Credits Applied:	  54
+Unmet conditions for this set of requirements:	You currently have 54 credits,  you still need 15 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 07	Intro to Comm and Media	A- 	3	FALL 2023
+Complete		Theorizing Comm and Media
+CMST 210 01	Theorizing Comm and Media	B 	3	SPRING 2024
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	B 	3	FALL 2023
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A- 	3	SPRING 2024
+Complete		Intro Animation & VFX
+ANIM 103 03	Intro Animation & VFX	A 	3	FALL 2023
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2024
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	B+ 	3	FALL 2024
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	B+ 	3	FALL 2024
+Complete		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	A 	3	SPRING 2025
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	A 	3	SPRING 2025
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	C 	3	FALL 2025
+Complete		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	B- 	3	FALL 2025
+Complete except for in-progress classes		VFX, Lighting, and Rendering
+ANIM 360 01	VFX, Lighting, and Rendering	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		VFX for Film
+ANIM 380 01	VFX for Film	REG 	(3)	SPRING 2026
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Complete except for in-progress classes		300-Level Electives
+ANIM 301 01	2D Animation and VFX II	REG 	(3)	SPRING 2026
+ANIM 370 01	Immersive Storytelling	REG 	(3)	SPRING 2026
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Complete		SCM Elective Courses
+CMST 202 01	Listening	A 	3	FALL 2025
+FMTV 210 02	Intro to Screenwriting	A 	3	FALL 2025
+
+  Free Electives	
+Credits Applied:	12	Classes Applied:	4
+ARIL 311	Comics	REG 	3	SPRING 2026
+CMDA 220	Writing for the Media	REG 	3	SPRING 2026
+STCM 140	Multimedia Production	B- 	3	SPRING 2025
+TRNS FE2	FREE ELECTIVE	TA 	3	FALL 2023
+Satisfied by:   ART260 - Graphic Design I - Bergen Community College
+  Work Not Applicable to Program	
+Credits Applied:	0	Classes Applied:	1
+AMSL 101	Beginning Amer Sign Language I	WD 	0	FALL 2024
+  In-progress	
+Credits Applied:	18	Classes Applied:	6
+ANIM 301	2D Animation and VFX II	REG 	3	SPRING 2026
+ANIM 360	VFX, Lighting, and Rendering	REG 	3	SPRING 2026
+ANIM 370	Immersive Storytelling	REG 	3	SPRING 2026
+ANIM 380	VFX for Film	REG 	3	SPRING 2026
+ARIL 311	Comics	REG 	3	SPRING 2026
+CMDA 220	Writing for the Media	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    3  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+8.
+Advisor	Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.985	Concentration		Undergraduate Student Attributes	Commuter Meal Plan Deposit
+Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  120
+ 	 	Credits Applied:	  79
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 79 credits,  you still need a minimum of 41 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Not yet complete		General Education Requirements
+Still Needed:	See General Education, BFA section
+Complete except for in-progress classes		World Languages & Cultures Requirements
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Not yet complete	General Education, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  22
+ 	 	Credits Applied:	  16
+Unmet conditions for this set of requirements:	You currently have 16 credits,  you still need 6 more credits. 
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 116	New Student Seminar	A 	1	FALL 2023
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 AT	College Writing I	A 	3	FALL 2023
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 05	College Writing II	A 	3	FALL 2024
+Not yet complete		(C3) COMMUNICATION: COMMUNICATION
+Not yet complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute GEC3
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 285 07	Mythology	A 	3	FALL 2025
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+EDFD 220 02	Philosophcal Orientatn to Educ	A 	3	SPRING 2024
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 100 17	Intro to Computer Concepts	A 	3	SPRING 2025
+Not yet complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Not yet complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute GEK1
+Complete except for in-progress classes	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete except for in-progress classes		WORLD CULTURES
+Complete except for in-progress classes		World Cultures courses
+GSWS 102 02	Intro to Womens&Gender Studies	REG 	(3)	SPRING 2026
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		American Sign Language
+AMSL 101 07	Beginning Amer Sign Language I	A 	3	SPRING 2025
+AMSL 102 03	Beginning Amer Sign Lang II	A 	3	FALL 2025
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  69
+GPA:	  3.977	Credits Applied:	  48
+Unmet conditions for this set of requirements:	You currently have 48 credits,  you still need 21 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 07	Intro to Comm and Media	A- 	3	FALL 2023
+Complete		Theorizing Comm and Media
+CMST 210 04	Theorizing Comm and Media	A 	3	FALL 2024
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	A 	3	FALL 2023
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A 	3	SPRING 2024
+Complete		Intro Animation & VFX
+ANIM 103 03	Intro Animation & VFX	A 	3	FALL 2023
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2024
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	A 	3	SPRING 2024
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	FALL 2024
+Complete		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	A 	3	FALL 2024
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	A 	3	SPRING 2025
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	A 	3	SPRING 2025
+Complete		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	A 	3	FALL 2025
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Complete		VFX for Film
+ANIM 380 01	VFX for Film	A 	3	FALL 2025
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Complete except for in-progress classes		300-Level Electives
+ANIM 301 01	2D Animation and VFX II	REG 	(3)	SPRING 2026
+ANIM 302 01	3D Modeling II	REG 	(3)	SPRING 2026
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+CMST 340 01	Communication, Media & Gender	REG 	(3)	SPRING 2026
+Still Needed:	1 Class in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+
+  Free Electives	
+Credits Applied:	6	Classes Applied:	2
+ARDW DPT	ARDW DEPT REVIEW	TP 	3	FALL 2023
+Satisfied by:   ARTDRAWINGEXAM - Art Drawing - AP Exam
+ARHT DPT	ARHT DEPT REVIEW	TP 	3	FALL 2023
+Satisfied by:   ARTHISTORYEXAM - Art History - AP Exam
+  Work Not Applicable to Program	
+Credits Applied:	0	Classes Applied:	2
+ANTH 100	Cultural Anthropology	WD 	0	SPRING 2024
+RELG 101	Understanding Religion	WD 	0	FALL 2023
+  In-progress	
+Credits Applied:	12	Classes Applied:	4
+ANIM 301	2D Animation and VFX II	REG 	3	SPRING 2026
+ANIM 302	3D Modeling II	REG 	3	SPRING 2026
+CMST 340	Communication, Media & Gender	REG 	3	SPRING 2026
+GSWS 102	Intro to Womens&Gender Studies	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    6  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+9. Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.794	Concentration		Undergraduate Student Attributes	Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  120
+ 	 	Credits Applied:	  69
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 69 credits,  you still need a minimum of 51 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Not yet complete		GENERAL EDUCATION AND WORLD LANGUAGES & CULTURES REQUIREMENTS
+Not yet complete		General Education
+Still Needed:	See General Education, BFA section
+Complete except for in-progress classes		World Languages & Cultures
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Not yet complete	General Education, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  22
+ 	 	Credits Applied:	  20
+Unmet conditions for this set of requirements:	You currently have 20 credits,  you still need 2 more credits. 
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 27	New Student Seminar	A 	1	FALL 2024
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 AG	College Writing I	A 	3	FALL 2024
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 144	College Writing II	A 	4	SPRING 2025
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 16	Fund Speech:Comm Requirement	A 	3	SUMMER 2024
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 285 27	Mythology	A 	3	FALL 2025
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+RELG 100 06	Religions of the World	A 	3	SPRING 2025
+Not yet complete		(G) COMPUTER SCIENCE
+Not yet complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute GEG
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HIST 118 11	History of U.S. Since 1876	A 	3	SUMMER 2024
+Complete except for in-progress classes	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete except for in-progress classes		WORLD CULTURES
+Complete except for in-progress classes		World Cultures courses
+ANTH 100 15	Cultural Anthropology	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete except for in-progress classes		World Language
+Complete except for in-progress classes		American Sign Language
+AMSL 101 15	Beginning Amer Sign Language I	A 	3	FALL 2025
+AMSL 102 16	Beginning Amer Sign Lang II	REG 	(3)	SPRING 2026
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2024-2025	Credits Required:	  69
+GPA:	  3.630	Credits Applied:	  39
+Unmet conditions for this set of requirements:	You currently have 39 credits,  you still need 30 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 09	Intro to Comm and Media	B 	3	FALL 2024
+Complete		Theorizing Comm and Media
+CMST 210 02	Theorizing Comm and Media	B 	3	FALL 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 01	Drawing Anatomy for Animation	A 	3	FALL 2024
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A 	3	FALL 2024
+Complete		Intro Animation & VFX
+ANIM 103 03	Intro Animation & VFX	A 	3	FALL 2024
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2025
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	B+ 	3	SPRING 2025
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	SPRING 2025
+Complete		Visual Effects Compositing I
+ANIM 210 01	Visual Effects Compositing I	B+ 	3	FALL 2025
+Complete except for in-progress classes		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	REG 	(3)	SPRING 2026
+Complete		3D Animation and Rigging
+ANIM 321 01	3D Animation and Rigging I	A- 	3	FALL 2025
+Complete except for in-progress classes		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	REG 	(3)	SPRING 2026
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Not yet complete		300-Level Electives
+ANIM 302 01	3D Modeling II	REG 	(3)	SPRING 2026
+Still Needed:	1 Class in ANIM 301 or 330 or 331 or 335 or 351 or 370
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Not yet complete		SCM Elective Courses
+Still Needed:	2 Classes in CMDA 100:499 or CMST 102:499 or FMTV 100:499 or JOUR 100:499 or SPTC 100:499 or STCM 100:499
+
+  Free Electives	
+Credit Applied:	1	Classes Applied:	1
+PEGN 278	Yoga	A 	1	SUMMER 2024
+  In-progress	
+Credits Applied:	15	Classes Applied:	5
+AMSL 102	Beginning Amer Sign Lang II	REG 	3	SPRING 2026
+ANIM 282	History of Animation and VFX	REG 	3	SPRING 2026
+ANIM 302	3D Modeling II	REG 	3	SPRING 2026
+ANIM 325	Interactive Game Development I	REG 	3	SPRING 2026
+ANTH 100	Cultural Anthropology	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+
+10.
+
+	Morales, Victor 
+Johnson, Devon 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.732	Concentration		Undergraduate Student Attributes	Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Complete except for in-progress classes	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2022-2023	Credits Required:	  120
+ 	 	Credits Applied:	  120
+Complete except for in-progress classes		Minimum of 120 credits must be completed to earn degree.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		General Education Requirements
+Complete		World Languages & Cultures Requirements
+Complete except for in-progress classes		Major Requirements
+Not yet complete	Graduation Application Status	
+Academic Catalog Yr.:	  2022-2023
+ 	 
+Not yet complete		Graduation Application Required for All Students
+Still Needed:	Complete the online graduation application through NEST. Click on the link for more information. 
+Complete	General Education, BFA	
+Academic Catalog Yr.:	  2022-2023	Credits Required:	  22
+ 	 	Credits Applied:	  23
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 32	New Student Seminar	A 	1	FALL 2022
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 BY	College Writing I	A 	4	FALL 2022
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+WRIT 106 114	College Writing II	A- 	3	SPRING 2023
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 23	Fund Speech:Comm Requirement	A 	3	FALL 2022
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+VIST 106 02	Modern Visions 1400-1945	B+ 	3	FALL 2023
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+PHIL 100 15	Intro to Philosophy	A- 	3	SPRING 2023
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 100 29	Intro to Computer Concepts	A 	3	FALL 2023
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HIST 106 04	Contemporary Europe 1914-Prese	B 	3	SPRING 2023
+Complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2022-2023	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete		WORLD CULTURES
+Complete		World Cultures courses
+MUGN 120 04	Rap&Rock as Cultural Phenomena	A 	3	SPRING 2025
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		American Sign Language
+AMSL 101 22	Beginning Amer Sign Language I	A- 	3	FALL 2024
+AMSL 102 13	Beginning Amer Sign Lang II	A- 	3	SPRING 2025
+Complete except for in-progress classes	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2022-2023	Credits Required:	  69
+GPA:	  3.740	Credits Applied:	  69
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 06	Intro to Comm and Media	B 	3	SPRING 2023
+Complete		Theorizing Comm and Media
+CMST 210 04	Theorizing Comm and Media	B 	3	FALL 2024
+Complete except for in-progress classes		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 	DRAWING ANATOMY FOR ANIMATION	TP 	3	FALL 2022
+Satisfied by	ARTDRAWINGEXAM - Art Drawing - AP Exam
+Complete		Digital Color & Light Concepts
+ARFD 103 10	Color and Light	A 	3	FALL 2022
+Exception By:	Wojenski, Matthew	On:	10/25/2022
+Apply Here :  Apply ARFD 103 as ANIM 102 per S. Wood
+Complete		Intro Animation & VFX
+ANIM 103 01	Intro Animation & VFX	A 	3	SPRING 2023
+Complete		Figure Drawing: Animation
+ARFD 101 16	Surface	A 	3	FALL 2022
+Exception By:	Wojenski, Matthew	On:	10/25/2022
+Apply Here :  Apply ARFD 101 as ANIM 104 per S. Wood
+Complete		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	A- 	3	FALL 2023
+Complete		3D Modeling I
+ANIM 202 01	3D Modeling I	A 	3	FALL 2023
+Complete		Visual Effects Compositing I
+ANIM 210 02	Visual Effects Compositing I	A 	3	SPRING 2024
+Complete		History of Animation and VFX
+VIST 102 09	Visual Culture	A 	3	FALL 2022
+Exception By:	Wojenski, Matthew	On:	10/25/2022
+Apply Here :  Apply VIST 102 as ANIM 282 per S. Wood
+Complete		3D Animation and Rigging
+ANIM 321 03	3D Animation and Rigging I	A 	3	SPRING 2024
+Complete		Interactive Game Development I
+ANIM 325 01	Interactive Game Development I	A- 	3	FALL 2024
+Complete		VFX, Lighting, and Rendering
+ANIM 360 01	VFX, Lighting, and Rendering	B 	3	SPRING 2025
+Complete		VFX for Film
+ANIM 380 01	VFX for Film	B 	3	SPRING 2025
+Complete except for in-progress classes		Industry Preparation
+ANIM 401 01	Industry Preparation	REG 	(3)	SPRING 2026
+Complete		Thesis I
+ANIM 423 01	Thesis I	A 	3	FALL 2025
+Complete except for in-progress classes		Thesis II
+ANIM 424 02	Thesis II	REG 	(3)	SPRING 2026
+Complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Complete		300-Level Electives
+ANIM 301 01	2D Animation and VFX II	A 	3	SPRING 2024
+ANIM 302 01	3D Modeling II	A- 	3	SPRING 2024
+Complete		400-Level Electives
+ANIM 421 01	3D Animation and Rigging II	A- 	3	FALL 2025
+ANIM 455 02	Collaborative Production	A 	3	FALL 2024
+Complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Complete		SCM Elective Courses
+FMTV 204 01	Film Forum	A 	3	FALL 2025
+FMTV 210 05	Intro to Screenwriting	A 	3	SPRING 2024
+
+  Free Electives	
+Credits Applied:	19	Classes Applied:	7
+ANIM 331	Experimental Animation	REG 	3	SPRING 2026
+ANIM 425	Interactive Game Dev II	REG 	3	SPRING 2026
+ARAN 190	Intro to the Visual Arts	A- 	3	FALL 2025
+ARST 204	Painting	B+ 	3	SPRING 2025
+ARST 205	Photography	REG 	3	SPRING 2026
+ARST 206	Printmaking	A 	3	FALL 2025
+PEGN 278	Yoga	A 	1	FALL 2025
+  Work Not Applicable to Program	
+Credits Applied:	0	Classes Applied:	2
+ARTX 201	Culture and Appearance	WD 	0	FALL 2024
+CMST 210	Theorizing Comm and Media	WD 	0	FALL 2023
+  In-progress	
+Credits Applied:	15	Classes Applied:	5
+ANIM 331	Experimental Animation	REG 	3	SPRING 2026
+ANIM 401	Industry Preparation	REG 	3	SPRING 2026
+ANIM 424	Thesis II	REG 	3	SPRING 2026
+ANIM 425	Interactive Game Dev II	REG 	3	SPRING 2026
+ARST 205	Photography	REG 	3	SPRING 2026
+
+ Exceptions
+Type	Description	Date	Who	Block	Enforced
+Apply Here	Apply VIST 102 as ANIM 282 per S. Wood	10/25/2022	Wojenski, Matthew	RA001599	Yes
+Apply Here	Apply ARFD 101 as ANIM 104 per S. Wood	10/25/2022	Wojenski, Matthew	RA001599	Yes
+Apply Here	Apply ARFD 103 as ANIM 102 per S. Wood	10/25/2022	Wojenski, Matthew	RA001599	Yes
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    3  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+
+11.
+Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.571	Concentration		Undergraduate Student Attributes	Commuter Meal Plan Deposit
+Health Insurance Assigned
+Presidential Scholars Program
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  120
+ 	 	Credits Applied:	  82
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 82 credits,  you still need a minimum of 38 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Complete		A minimum of 30 credits must completed at Montclair State University.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		General Education Requirements
+Complete		World Languages & Cultures Requirements
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Complete	General Education, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  22
+ 	 	Credits Applied:	  22
+Complete		(A) NEW STUDENT SEMINAR
+Complete		Complete one class with the GEA attribute. Click the link to see a list of classes.
+GNED 199 05	New Student Seminar	A 	1	SPRING 2024
+Complete		(C1)COMMUNICATION: WRITING
+Complete		Complete one class with the GEC1 attribute. Click the link to see a list of classes.
+WRIT 105 	COLLEGE WRITING I	TA 	3	SPRING 2024
+Satisfied by	ENGL101 - INTRO TO ACADEMIC WRITING - New Jersey Institute Tech
+Complete		(C2) COMMUNICATION: LITERATURE
+Complete		Complete one class with the GEC2 attribute. Click the link to see a list of classes.
+ENGL 110 01	The Analytic Essay	A 	3	FALL 2024
+Complete		(C3) COMMUNICATION: COMMUNICATION
+Complete		Complete one class with the GEC3 attribute. Click the link to see a list of classes.
+CMST 101 43	Fund Speech:Comm Requirement	A 	3	SPRING 2024
+Complete		(F1) GREAT WORKS AND THEIR INFLUENCES
+Complete		Complete one class with the GEF1 attribute. Click the link to see a list of classes.
+HUMN 202 04	Gen Humanities II-from 1400	A 	3	SPRING 2024
+Complete		(F2) PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES
+Complete		Complete one class with the GEF2 attribute. Click the link to see a list of classes.
+PHIL 100 06	Intro to Philosophy	A- 	3	FALL 2024
+Complete		(G) COMPUTER SCIENCE
+Complete		Complete one class with the GEG attribute. Click the link to see a list of classes.
+CSIT 104 02	Python Programming I	C 	3	FALL 2025
+Complete		(K1) SOCIAL SCIENCE: AMERICAN AND EUROPEAN HISTORY
+Complete		Complete one class with the GEK1 attribute. Click the link to see a list of classes.
+HIST 106 01	Contemporary Europe	A 	3	SPRING 2025
+Complete	World Languages & Cultures, BFA	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  3
+ 	 	Credits Applied:	  9
+Complete		WORLD CULTURES
+Complete		World Cultures courses
+ANTH 150 02	Cultures of Latin America	A 	3	SPRING 2025
+Complete		WORLD LANGUAGES
+Six credits of World Language are required when starting at Beginner or Beginner II level. Only 3 credits are required when starting at Intermediate/Advanced level. 
+Complete		World Language
+Complete		Korean: Beginner
+KORE 101 02	Beginning Korean I	B+ 	3	FALL 2024
+KORE 102 01	Beginning Korean II	A 	3	SPRING 2025
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2023-2024	Credits Required:	  69
+GPA:	  3.489	Credits Applied:	  33
+Unmet conditions for this set of requirements:	You currently have 33 credits,  you still need 36 more. 
+Complete		Major GPA of 2.0 or higher
+Complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 05	Intro to Comm and Media	C 	3	SPRING 2024
+Complete		Theorizing Comm and Media
+CMST 210 02	Theorizing Comm and Media	C 	3	FALL 2025
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 02	Drawing Anatomy for Animation	A 	3	FALL 2024
+Complete		Digital Color & Light Concepts
+ANIM 102 01	Digital Color & Light Concepts	A- 	3	SPRING 2025
+Complete		Intro Animation & VFX
+ANIM 103 01	Intro Animation & VFX	A 	3	FALL 2025
+Complete		Figure Drawing: Animation
+ANIM 104 01	Figure Drawing: Animation	A 	3	SPRING 2025
+Complete except for in-progress classes		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		3D Modeling I
+ANIM 202 01	3D Modeling I	REG 	(3)	SPRING 2026
+Not yet complete		Visual Effects Compositing I
+Still Needed:	1 Class in ANIM 210
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	A 	3	SPRING 2024
+Not yet complete		3D Animation and Rigging
+Still Needed:	1 Class in ANIM 321
+Not yet complete		Interactive Game Development I
+Still Needed:	1 Class in ANIM 325
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Not yet complete		300-Level Electives
+Still Needed:	2 Classes in ANIM 301 or 302 or 330 or 331 or 335 or 351 or 370
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Complete		SCM Elective Courses
+FMTV 260 01	Film Story Analysis	A 	3	FALL 2025
+JOUR 288 03	Special Topics-Journalism	A- 	3	FALL 2025
+
+  Free Electives	
+Credits Applied:	18	Classes Applied:	6
+ARAN DPT	ARAN Dept. Review	TB+ 	3	SPRING 2024
+Satisfied by:   AD150 - COLOR & COMPOSITION - New Jersey Institute Tech
+ARHS DPT	ARHS Dept. Review	TB+ 	3	SPRING 2024
+Satisfied by:   AD161 - HIST OF ART & DES I - New Jersey Institute Tech
+FMTV 261	Special Topics-Film and TV	REG 	3	SPRING 2026
+HUMN 315	Roman Art	REG 	3	SPRING 2026
+MATH DPT	MATH Dept. Review	TC 	3	SPRING 2024
+Satisfied by:   MATH107 - PRECALCULUS II - New Jersey Institute Tech
+MUGN 100	Introduction to Music	B+ 	3	SPRING 2024
+  In-progress	
+Credits Applied:	12	Classes Applied:	4
+ANIM 201	2D Animation and VFX I	REG 	3	SPRING 2026
+ANIM 202	3D Modeling I	REG 	3	SPRING 2026
+FMTV 261	Special Topics-Film and TV	REG 	3	SPRING 2026
+HUMN 315	Roman Art	REG 	3	SPRING 2026
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    0  Credits
+ T4 -    12  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+12.
+Advisor	Morales, Victor 	Major	Animation and Visual Effects	Graduate Student Attributes	
+Overall GPA	3.825	Concentration		Undergraduate Student Attributes	Commuter Meal Plan Deposit
+Health Insurance Assigned
+New Student Seminar Waiver
+Graduation Application Status		Additional Curriculum		Degree Requirements	See Policies
+Confidential Flag		Minor		Undergraduate Transfer Policies	See Policies
+
+
+
+Not yet complete	Degree in Bachelor of Fine Arts	
+Academic Catalog Yr.:	  2025-2026	Credits Required:	  120
+ 	 	Credits Applied:	  84
+Unmet conditions for this set of requirements:	120 credits are required to earn your degree. You currently have 84 credits,  you still need a minimum of 36 more credits. This Degree Works total includes courses you have completed and courses that are in progress. It does not determine student classification or registration priority. Log into your NEST account and click on 'View Your Registration Status and Earned Credits' to view your actual earned credits as of your last semester of attendance. 
+Not yet complete		Minimum of 120 credits must be completed to earn degree.
+Still Needed:	A minimum of 120 credits must be completed to earn degree. Free electives may be needed to reach minimum credits required.
+Not yet complete		A minimum of 30 credits must completed at Montclair State University.
+Still Needed:	Minimum credits taken at Montclair State University: You have 24 but still need a minimum of 6 credits.
+Complete		You meet the minimum institutional 2.0 GPA requirement.
+Complete		New Student Seminar Waived
+Not yet complete		SEEDS Requirements
+Still Needed:	See SEEDS - General Education section
+Not yet complete		Major Requirements
+Still Needed:	See Major in Animation and Visual Effects section
+Not yet complete	SEEDS - General Education	
+Academic Catalog Yr.:	  2025-2026	Credits Required:	  30
+ 	 	Credits Applied:	  32
+Complete		EFFECTIVE WRITING
+Complete		Effective Writing I courses - Complete one class with the EF1 attribute. Click the link to see a list of classes.
+WRIT 105 	COLLEGE WRITING I	TA 	3	FALL 2025
+Satisfied by	ENGL121 - ENGLISH COMPOSITION: WRITING P - Brookdale Community College
+Complete		Effective Writing II courses - Complete one class with the EF2 attribute. Click the link to see a list of classes.
+WRIT 106 	COLLEGE WRITING II	TA 	3	FALL 2025
+Satisfied by	ENGL122 - ENGLISH COMPOSITION: WRITING A - Brookdale Community College
+Not yet complete		INTERACTIVE COMMUNICATION
+Not yet complete		Interactive Communication courses - Complete one class with the ICO attribute. Click the link to see a list of classes.
+Still Needed:	1 Class in @ @   with Attribute ICO
+Complete		QUANTITATIVE REASONING
+Complete		Quantitative Reasoning courses - Complete one class with the QUR attribute. Click the link to see a list of classes.
+MATH 100 	INTERMEDIATE ALGEBRA	TB 	4	FALL 2025
+Satisfied by	MATH151 - INTERMEDIATE ALGEBRA - Brookdale Community College
+Complete except for in-progress classes		POLITICAL AND CIVIC LIFE
+Complete except for in-progress classes		Political and Civic Life courses - Complete one class with the PCL attribute. Click the link to see a list of classes.
+POLS 100 05	Introduction to Politics	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		WORLD LANGUAGES
+Complete except for in-progress classes		Two sequential classes in one World Language are required when starting at Beginner I or Beginner II level. One class is required when starting at the Intermediate/Advanced level
+Complete except for in-progress classes		Spanish: Beginner I (Option 1)
+SPAN 101 	SPANISH I	TA 	4	FALL 2025
+Satisfied by	SPAN101 - ELEMENTARY SPANISH I - Brookdale Community College
+SPAN 102 04	Spanish II	REG 	(3)	SPRING 2026
+Complete except for in-progress classes		EXPLORATION
+Complete except for in-progress classes		Complete 1 course from four different categories, for a total of 4 Exploration courses.
+Complete		Creative Expression - Click the link to see a list of classes with the CEX attribute.
+ANIM 101 	Drawing Anatomy for Animation	TB+ 	3	FALL 2025
+Satisfied by	ARTS111 - DRAWING I - Brookdale Community College
+Complete		Historical Thinking - Click the link to see a list of classes with the HT attribute.
+HIST 106 	CONTEMPORARY EUROPE 1914-PRESE	TA 	3	FALL 2025
+Satisfied by	HIST106 - WORLD CIVILIZATION II - Brookdale Community College
+Complete except for in-progress classes		Literary and Artistic Analysis - Click the link to see a list of classes with the LAA attribute.
+MUGN 100 06	Introduction to Music	REG 	(3)	SPRING 2026
+Complete		Scientific Reasoning - Click the link to see a list of classes with the SR attribute.
+CSIT 104 	Python Programming I	TA 	3	FALL 2025
+Satisfied by	COMP171 - PROGRAMMING I - Brookdale Community College
+Not yet complete	Major in Animation and Visual Effects	
+Academic Catalog Yr.:	  2025-2026	Credits Required:	  69
+GPA:	  3.825	Credits Applied:	  36
+Unmet conditions for this set of requirements:	You currently have 36 credits,  you still need 33 more. 
+Complete		Major GPA of 2.0 or higher
+Not yet complete		SCHOOL OF COMMUNICATION AND MEDIA REQUIREMENTS
+Complete		Intro to Comm and Media
+CMST 110 16	Intro to Comm and Media	A 	3	FALL 2025
+Not yet complete		Theorizing Comm and Media
+Still Needed:	1 Class in CMST 210
+Not yet complete		MAJOR REQUIREMENTS
+Complete		Drawing Anatomy for Animation
+ANIM 101 	Drawing Anatomy for Animation	TB+ 	3	FALL 2025
+Satisfied by	ARTS111 - DRAWING I - Brookdale Community College
+Complete		Digital Color & Light Concepts
+ANIM 102 	Digital Color & Light Concepts	TA 	3	FALL 2025
+Satisfied by	DIGM116 - PRODUCTION AND STORYBOARDING: - Brookdale Community College
+Complete		Intro Animation & VFX
+ANIM 103 	Intro Animation & VFX	TA 	3	FALL 2025
+Satisfied by	DIGM122 - MAYA II: FUNDAMENTALS - Brookdale Community College
+Complete		Figure Drawing: Animation
+ANIM 104 	Figure Drawing: Animation	TA- 	3	FALL 2025
+Satisfied by	ARTS213 - FIGURE DRAWING - Brookdale Community College
+Complete except for in-progress classes		2D Animation and VFX I
+ANIM 201 01	2D Animation and VFX I	REG 	(3)	SPRING 2026
+Complete		3D Modeling I
+ANIM 202 	3D Modeling I	TA 	3	FALL 2025
+Satisfied by	DIGM121 - MAYA I: 3D MODELING - Brookdale Community College
+Complete		Visual Effects Compositing I
+ANIM 210 	Visual Effects Compositing I	TA- 	3	FALL 2025
+Satisfied by	DIGM115 - DIGITAL EDITING: AFTER EFFECTS - Brookdale Community College
+Complete		History of Animation and VFX
+ANIM 282 01	History of Animation and VFX	A 	3	FALL 2025
+Not yet complete		3D Animation and Rigging
+Still Needed:	1 Class in ANIM 321
+Not yet complete		Interactive Game Development I
+Still Needed:	1 Class in ANIM 325
+Not yet complete		VFX, Lighting, and Rendering
+Still Needed:	1 Class in ANIM 360
+Not yet complete		VFX for Film
+Still Needed:	1 Class in ANIM 380
+Not yet complete		Industry Preparation
+Still Needed:	1 Class in ANIM 401
+Not yet complete		Thesis I
+Still Needed:	1 Class in ANIM 423
+Not yet complete		Thesis II
+Still Needed:	1 Class in ANIM 424
+Not yet complete		ANIMATION AND VISUAL EFFECTS TOPICAL ELECTIVES
+Not yet complete		300-Level Electives
+ANIM 351 01	Animated Devel & Pitch Bible	A 	3	FALL 2025
+Still Needed:	1 Class in ANIM 301 or 302 or 330 or 331 or 335 or 370
+Not yet complete		400-Level Electives
+Still Needed:	2 Classes in ANIM 400 or 421 or 425 or 455
+Complete		SCHOOL OF COMMUNICATION AND MEDIA ELECTIVES
+Complete		SCM Elective Courses
+FMTV 260 01	Film Story Analysis	B+ 	3	FALL 2025
+JOUR 180 	Multimedia Toolkit	TA 	3	FALL 2025
+Satisfied by	DGMD101 - INTRODUCTION TO DIGITAL MEDIA - Brookdale Community College
+
+  Free Electives	
+Credits Applied:	19	Classes Applied:	7
+CMST TRN	CMST TRANSFER CREDIT	TA 	3	FALL 2025
+Satisfied by:   TELV122 - DIGITAL VIDEO PRODUCTION - Brookdale Community College
+TRNS FE1	FREE ELECTIVE	TA 	3	FALL 2025
+Satisfied by:   CSSC105 - COLLEGE SUCCESS SEMINAR - Brookdale Community College
+TRNS FE2	TRANSFER FREE ELECTIVE	TA 	3	FALL 2025
+Satisfied by:   DIGM126 - DIGITAL MODELING: Z BRUSH - Brookdale Community College
+TRNS FE2	TRANSFER FREE ELECTIVE	TA 	3	FALL 2025
+Satisfied by:   DIGM221 - MAYA III: RENDERING - Brookdale Community College
+TRNS FE2	TRANSFER FREE ELECTIVE	TA 	3	FALL 2025
+Satisfied by:   DIGM222 - MAYA IV: ADVANCED MODELING AND - Brookdale Community College
+TRNS FE2	TRANSFER FREE ELECTIVE	TA 	1	FALL 2025
+Satisfied by:   DIGM235 - PREVISUALIZATION AND CAREER DE - Brookdale Community College
+TRNS FE2	TRANSFER FREE ELECTIVE	TA 	3	FALL 2025
+Satisfied by:   DIGM298 - DESIGN AND PRODUCTION CAPSTONE - Brookdale Community College
+  In-progress	
+Credits Applied:	12	Classes Applied:	4
+ANIM 201	2D Animation and VFX I	REG 	3	SPRING 2026
+MUGN 100	Introduction to Music	REG 	3	SPRING 2026
+POLS 100	Introduction to Politics	REG 	3	SPRING 2026
+SPAN 102	Spanish II	REG 	3	SPRING 2026
+  Not Counted	
+Credits Applied:	10	Classes Applied:	3
+ARPH 211	Digital photo and Imaging 2	Maximum Credits exceeded 	TA 	3	FALL 2025
+Satisfied by:   DIGM125 - DIGITAL EDITING: COMPOSITE - Brookdale Community College
+CSIT 100	INTRO TO COMPUTER CONCEPTS	Maximum Credits exceeded 	TA 	3	FALL 2025
+Satisfied by:   COMP126 - COMPUTER LOGIC AND DESIGN - Brookdale Community College
+TRNS FE1	Free Elective	Maximum Credits exceeded 	TB 	4	FALL 2025
+Satisfied by:   AUTO101 - AUTOMOTIVE SERVICE - Brookdale Community College
+
+  For Registrar's Office use only
+Montclair State University accepts no more than 60 credits towards graduation from a two year institution.
+ T2 -    70  Credits
+ T4 -    0  Credits
+
+
+Legend
+Complete	Complete	Complete except for in-progress classes	Complete except for classes in-progress	(T)	Transfer Class
+Not yet complete	Not Complete	Nearly complete - see advisor	Nearly complete - see advisor	@	Any course number
+
+
+
+
+
+
+
