@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Advising Robot (Option A+) — Checklist + Next-Semester Advice</title>
+  <style>
+    :root{
+      --bg:#0b0c10; --panel:#111218; --muted:#a8adb7; --text:#eef0f4;
+      --line:#232532; --ok:#76f7a8; --ip:#ffd07a; --no:#ff7b7b; --chip:#0e0f15;
+    }
+    body{ margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--text); }
+    header{ padding:18px 22px; border-bottom:1px solid var(--line); position:sticky; top:0;
+      background:linear-gradient(180deg, rgba(11,12,16,.98), rgba(11,12,16,.88)); backdrop-filter: blur(6px);
+    }
+    h1{ margin:0; font-size:16px; letter-spacing:.2px; }
+    .sub{ margin-top:6px; color:var(--muted); font-size:12px; line-height:1.35; }
+    main{ padding:16px 22px 40px; max-width:1180px; margin:0 auto; }
+    .grid{ display:grid; grid-template-columns: 1.15fr .85fr; gap:14px; align-items:start; }
+    .card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:14px; }
+    label{ font-size:12px; color:var(--muted); display:block; margin-bottom:6px; }
+    textarea{ width:100%; min-height:320px; resize:vertical; padding:12px; border-radius:12px; border:1px solid var(--line);
+      background:var(--chip); color:var(--text); font-size:13px; line-height:1.35;
+    }
+    select{ width:100%; padding:10px 10px; border-radius:12px; border:1px solid var(--line);
+      background:var(--chip); color:var(--text); font-size:13px;
+    }
+    button{ cursor:pointer; padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+      background:#171926; color:var(--text); font-weight:650;
+    }
+    button:hover{ filter:brightness(1.08); }
+    .btnrow{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .hr{ height:1px; background:var(--line); margin:12px 0; }
+    .sectionTitle{ margin:14px 0 8px; font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:.12em; }
+    .pill{ display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; border:1px solid var(--line);
+      background:var(--chip); color:var(--muted); font-size:12px; margin:0 8px 8px 0;
+    }
+    .ok{ color:var(--ok); } .ip{ color:var(--ip); } .no{ color:var(--no); }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px; }
+    .sem{ padding:10px 10px; border:1px solid var(--line); border-radius:12px; background:var(--chip); margin-bottom:10px; }
+    .sem h3{ margin:0 0 8px; font-size:13px; }
+    .list{ margin:0; padding-left:18px; }
+    .list li{ margin:5px 0; }
+    .small{ font-size:12px; color:var(--muted); line-height:1.35; }
+    .warn{ color:var(--ip); }
+    .adviceBox{ border:1px solid var(--line); border-radius:12px; background:var(--chip); padding:12px; }
+    .adviceGrid{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    .adviceGrid h4{ margin:0 0 6px; font-size:13px; }
+    .tag{ display:inline-flex; align-items:center; gap:6px; border:1px solid var(--line); padding:4px 8px; border-radius:999px; background:#0c0d12; color:var(--muted); font-size:12px; margin:0 6px 6px 0; }
+    @media (max-width: 980px){ .grid{ grid-template-columns:1fr; } .adviceGrid{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Advising Robot (Option A+) — Checklist + Next-Semester Advice (Dual: 2022 + 2025)</h1>
+  <div class="sub">
+    Paste DegreeWorks text, generate a checklist in the roadmap order, plus next-semester advising suggestions.</div>
+</header>
+
+<main>
+  <div class="grid">
+    <div class="card">
+      <label for="dw">Paste DegreeWorks text (sanitized)</label>
+      <textarea id="dw" placeholder="Paste audit text here (remove names/IDs if needed)..."></textarea>
+
+      <div class="btnrow">
+        <button id="runBtn">Generate Checklist + Advice</button>
+        <button id="downloadBtn" type="button">Download Report (.txt)</button>
+        <button id="clearBtn" type="button">Clear</button>
+      </div>
+
+      <div class="hr"></div>
+      <div class="small"></div>
+    </div>
+
+    <div class="card">
+      <div class="sectionTitle">Template Selection</div>
+      <label for="template">Use this roadmap PDF</label>
+      <select id="template">
+        <option value="auto">Auto-detect</option>
+        <option value="seeds2025">Fall 2025 (SEEDS roadmap)</option>
+        <option value="gened2022">Fall 2022 (GenEd roadmap)</option>
+      </select>
+
+      <div class="hr"></div>
+      <div class="sectionTitle">Current Analysis Semester</div>
+      <div class="small">Manual (safer): choose the semester the student is taking <b>right now</b>. These courses will be marked <span class="ip">in progress</span>.</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px;">
+        <div>
+          <label for="curTerm">Term</label>
+          <select id="curTerm">
+            <option value="SPRING" selected>SPRING</option>
+            <option value="FALL">FALL</option>
+            <option value="SUMMER">SUMMER</option>
+            <option value="WINTER">WINTER</option>
+          </select>
+        </div>
+        <div>
+          <label for="curYear">Year</label>
+          <select id="curYear">
+            <option value="2026" selected>2026</option>
+            <option value="2025">2025</option>
+            <option value="2027">2027</option>
+            <option value="2024">2024</option>
+            <option value="2028">2028</option>
+            <option value="2023">2023</option>
+            <option value="2029">2029</option>
+            <option value="2030">2030</option>
+          </select>
+        </div>
+      </div>
+
+
+      <div class="sectionTitle">Detected</div>
+      <div id="detected" class="small">—</div>
+
+      <div class="sectionTitle">Status Summary</div>
+      <div id="pills"></div>
+
+      <div class="sectionTitle">Requirement Signals (Debug)</div>
+      <div id="reqdebug" class="small">Run the generator.</div>
+
+      <div class="sectionTitle">Course Signals (Debug)</div>
+      <div id="coursedebug" class="small">Run the generator.</div>
+
+      <div class="sectionTitle">Notes</div>
+      <div class="small">Transfer electives typically appear in the <span class="mono">Free Electives</span> bucket at the bottom of DegreeWorks. This tool treats those as credit you’ve already earned toward “Free Elective” slots in the roadmap.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <div class="sectionTitle">Advising Suggestions</div>
+    <div id="advice" class="small">Run the generator.</div>
+  </div>
+
+  <div class="card" style="margin-top:14px;">
+    <div class="sectionTitle">PDF Checklist (Exact Roadmap Order)</div>
+    <div id="guide" class="small">Run the generator.</div>
+  </div>
+</main>
+
+<script>
+/* =========================================
+   Templates — stable, PDF-order.
+   ========================================= */
+
+const TEMPLATES = {
+  seeds2025: {
+    name: "Fall 2025 (SEEDS roadmap)",
+    semesters: [
+      { title:"First year — Fall", items:[
+        { type:"req", key:"NSS", label:"New Student Seminar (1)" },
+        { type:"req", key:"SEEDS_EF1", label:"SEEDS: Effective Writing [EF1] (3)" },
+        { type:"course", code:"CMST 110", label:"CMST 110 Intro to Communication & Media (3)" },
+        { type:"course", code:"ANIM 101", label:"ANIM 101 Drawing Anatomy for Animation (3)" },
+        { type:"course", code:"ANIM 102", label:"ANIM 102 Digital Color & Light Concepts (3)" },
+        { type:"req", key:"WL_1", label:"SEEDS: World Language I (3)" },
+      ]},
+      { title:"First year — Spring", items:[
+        { type:"req", key:"SEEDS_EF2", label:"SEEDS: Effective Writing II [EF2] (3)" },
+        { type:"course", code:"CMST 210", label:"CMST 210 Theorizing Communication & Media (3)" },
+        { type:"course", code:"ANIM 103", label:"ANIM 103 Intro to Animation & VFX (3)" },
+        { type:"course", code:"ANIM 104", label:"ANIM 104 Figure Drawing: Animation (3)" },
+        { type:"req", key:"WL_2", label:"SEEDS: World Language II (3)" },
+      ]},
+      { title:"Second year — Fall", items:[
+        { type:"course", code:"ANIM 201", label:"ANIM 201 2D Animation & VFX I (3)" },
+        { type:"course", code:"ANIM 202", label:"ANIM 202 3D Modeling I (3)" },
+        { type:"course", code:"ANIM 282", label:"ANIM 282 History of Animation & VFX (3)" },
+        { type:"req", key:"SEEDS_ICO", label:"SEEDS: Interactive Communication [ICO] (3)" },
+        { type:"open", label:"Exploration / SCM elective slot (3) — advisor choice" },
+      ]},
+      { title:"Second year — Spring", items:[
+        { type:"course", code:"ANIM 210", label:"ANIM 210 Visual Effects Compositing I (3)" },
+        { type:"course", code:"ANIM 321", label:"ANIM 321 3D Animation & Rigging I (3)" },
+        { type:"req", key:"SEEDS_QUR", label:"SEEDS: Quantitative Reasoning [QUR] (3)" },
+        { type:"open", label:"SEEDS Exploration slot (3) — advisor choice" },
+        { type:"open", label:"Free Elective (3)" },
+      ]},
+      { title:"Third year — Fall", items:[
+        { type:"course", code:"ANIM 325", label:"ANIM 325 Game Development I (3)" },
+        { type:"course", code:"ANIM 360", label:"ANIM 360 Lighting & Rendering (3)" },
+        { type:"open", label:"ANIM 300-level elective (3)" },
+        { type:"req", key:"SEEDS_PCL", label:"SEEDS: Political & Civic Life [PCL] (3)" },
+        { type:"open", label:"Free Elective (3)" },
+      ]},
+      { title:"Third year — Spring", items:[
+        { type:"req", key:"SEEDS_SR", label:"SEEDS: Scientific Reasoning [SR] (3)" },
+        { type:"course", code:"ANIM 380", label:"ANIM 380 VFX for Film (3)" },
+        { type:"open", label:"ANIM 300-level elective (3)" },
+        { type:"open", label:"Free Elective (3)" },
+        { type:"open", label:"Free Elective (3)" },
+      ]},
+      { title:"Fourth year — Fall", items:[
+        { type:"open", label:"SCM elective (3)" },
+        { type:"open", label:"Free Elective (3)" },
+        { type:"open", label:"ANIM 400-level elective (3)" },
+        { type:"course", code:"ANIM 401", label:"ANIM 401 Industry Preparation (3)" },
+        { type:"course", code:"ANIM 423", label:"ANIM 423 Thesis I (3)" },
+      ]},
+      { title:"Fourth year — Spring", items:[
+        { type:"open", label:"SCM elective (3)" },
+        { type:"open", label:"Free Elective (2)" },
+        { type:"open", label:"ANIM 400-level elective (3)" },
+        { type:"open", label:"Free Elective (3)" },
+        { type:"course", code:"ANIM 424", label:"ANIM 424 Thesis II (3)" },
+      ]},
+    ]
+  },
+
+  gened2022: {
+    name: "Fall 2022 (GenEd roadmap)",
+    semesters: [
+      { title:"First year — Fall", items:[
+        { type:"req", key:"GE_A", label:"(A) New Student Seminar (1)" },
+        { type:"req", key:"GE_C1", label:"(C1) Communication: Writing (3)" },
+        { type:"course", code:"CMST 110", label:"CMST 110 Intro to Communication & Media (3)" },
+        { type:"course", code:"ANIM 101", label:"ANIM 101 Drawing Anatomy for Animation (3)" },
+        { type:"course", code:"ANIM 102", label:"ANIM 102 Digital Color & Light Concepts (3)" },
+        { type:"req", key:"WL_1", label:"World Language I (3)" },
+      ]},
+      { title:"First year — Spring", items:[
+        { type:"req", key:"GE_C2", label:"(C2) Communication: Literature (3)" },
+        { type:"course", code:"CMST 210", label:"CMST 210 Theorizing Communication & Media (3)" },
+        { type:"course", code:"ANIM 103", label:"ANIM 103 Intro to Animation & VFX (3)" },
+        { type:"course", code:"ANIM 104", label:"ANIM 104 Figure Drawing: Animation (3)" },
+        { type:"req", key:"WL_2", label:"World Language II (3)" },
+      ]},
+      { title:"Second year — Fall", items:[
+        { type:"course", code:"ANIM 201", label:"ANIM 201 2D Animation & VFX I (3)" },
+        { type:"course", code:"ANIM 202", label:"ANIM 202 3D Modeling I (3)" },
+        { type:"course", code:"ANIM 282", label:"ANIM 282 History of Animation & VFX (3)" },
+        { type:"req", key:"GE_C3", label:"(C3) Communication: Communication (3)" },
+        { type:"open", label:"SCM elective (3)" },
+      ]},
+      { title:"Second year — Spring", items:[
+        { type:"course", code:"ANIM 210", label:"ANIM 210 Visual Effects Compositing I (3)" },
+        { type:"course", code:"ANIM 321", label:"ANIM 321 3D Animation & Rigging I (3)" },
+        { type:"req", key:"GE_F1", label:"(F1) Great Works & Their Influences (3)" },
+        { type:"req", key:"GE_G", label:"(G) Computer Science (3)" },
+        { type:"open", label:"Free Elective (3)" },
+      ]},
+      { title:"Third year — Fall", items:[
+        { type:"course", code:"ANIM 325", label:"ANIM 325 Game Development I (3)" },
+        { type:"course", code:"ANIM 360", label:"ANIM 360 Lighting & Rendering (3)" },
+        { type:"open", label:"ANIM 300-level elective (3)" },
+        { type:"req", key:"GE_K1", label:"(K1) Social Science: American & European History (3)" },
+        { type:"open", label:"Free Elective (3)" },
+      ]},
+      { title:"Third year — Spring", items:[
+        { type:"open", label:"Free Elective (3)" },
+        { type:"course", code:"ANIM 380", label:"ANIM 380 VFX for Film (3)" },
+        { type:"open", label:"ANIM 300-level elective (3)" },
+        { type:"open", label:"Free Elective (3)" },
+        { type:"req", key:"WCR", label:"World Cultures (3)" },
+      ]},
+      { title:"Fourth year — Fall", items:[
+        { type:"open", label:"SCM elective (3)" },
+        { type:"open", label:"Free Elective (3)" },
+        { type:"open", label:"ANIM 400-level elective (3)" },
+        { type:"course", code:"ANIM 401", label:"ANIM 401 Industry Preparation (3)" },
+        { type:"course", code:"ANIM 423", label:"ANIM 423 Thesis I (3)" },
+      ]},
+      { title:"Fourth year — Spring", items:[
+        { type:"open", label:"Free Elective (3)" },
+        { type:"open", label:"Free Elective (2)" },
+        { type:"open", label:"ANIM 400-level elective (3)" },
+        { type:"req", key:"GE_F2", label:"(F2) Philosophical & Religious Perspectives (3)" },
+        { type:"course", code:"ANIM 424", label:"ANIM 424 Thesis II (3)" },
+      ]},
+    ]
+  }
+};
+
+/* =========================================
+   Core parsing
+   ========================================= */
+function U(s){ return (s||"").toUpperCase(); }
+const COURSE_RE = /\b([A-Z]{3,4})\s*([0-9]{3})\b/g;
+const TERM_RE = new RegExp(
+  "\\b(?:(?:FALL|SPRING|SUMMER|WINTER)\\s*(?:\\d{2}|\\d{4})|(?:FA|SP|SU|WI)\\s*(?:\\d{2}|\\d{4})|(?:\\d{2}|\\d{4})\\s*(?:FA|SP|SU|WI))\\b",
+  "i"
+);
+const GRADE_RE = /\b(A\+|A-|A|B\+|B-|B|C\+|C-|C|D\+|D-|D|F|TA\+|TA-|TA|TB\+|TB-|TB|TC\+|TC-|TC|T|P|S|REG)\b/;
+
+
+function normTermFromMatch(mt){
+  if (!mt) return null;
+  const raw = (mt[0]||"").toUpperCase().replace(/\s+/g,"");
+  const map = {FA:"FALL",SP:"SPRING",SU:"SUMMER",WI:"WINTER"};
+  let term = null, year = null;
+
+  // 2024FA or 24FA
+  let m = raw.match(/^(\d{2}|\d{4})(FA|SP|SU|WI)$/);
+  if (m){ year = m[1]; term = map[m[2]]; }
+
+  // FA24 or SP2025
+  if (!term){
+    m = raw.match(/^(FA|SP|SU|WI)(\d{2}|\d{4})$/);
+    if (m){ term = map[m[1]]; year = m[2]; }
+  }
+
+  // FALL24 / FALL2024
+  if (!term){
+    m = raw.match(/^(FALL|SPRING|SUMMER|WINTER)(\d{2}|\d{4})$/);
+    if (m){ term = m[1]; year = m[2]; }
+  }
+
+  if (year && year.length === 2) year = "20" + year;
+  const y = year ? parseInt(year,10) : null;
+  return (term && y) ? {term, year:y} : null;
+}
+
+
+function detectTemplate(textU){
+  const seeds = (
+    textU.includes("SEEDS - GENERAL EDUCATION") ||
+    textU.includes("INTERACTIVE COMMUNICATION") ||
+    textU.includes("POLITICAL AND CIVIC LIFE") ||
+    textU.includes("EXPLORATION") ||
+    textU.includes("ATTRIBUTE ICO") ||
+    textU.includes("EFFECTIVE WRITING")
+  );
+  const gened = (
+    textU.includes("GENERAL EDUCATION, BFA") ||
+    textU.includes("(C1)") || textU.includes("(C2)") || textU.includes("(C3)") ||
+    textU.includes("(F1)") || textU.includes("(F2)") || textU.includes("(K1)") ||
+    textU.includes("WORLD CULTURES") ||
+    textU.includes("ATTRIBUTE WCR") ||
+    textU.includes("GEC1") || textU.includes("GEF1") || textU.includes("GEK1")
+  );
+  if (gened && !seeds) return {key:"gened2022", confidence:"high"};
+  if (seeds && !gened) return {key:"seeds2025", confidence:"high"};
+  if (gened && seeds) return {key:"gened2022", confidence:"mixed"};
+  return {key:"seeds2025", confidence:"low"};
+}
+
+function sliceBlock(lines, startLabel){
+  const start = lines.findIndex(l => l.trim() === startLabel);
+  if (start === -1) return [];
+  let end = lines.length;
+  for (let i=start+1;i<lines.length;i++){
+    const t = lines[i].trim();
+    // common headings that begin a new bucket/section
+    if (
+      t === "IN-PROGRESS" ||
+      t === "NOT COUNTED" ||
+      t === "FREE ELECTIVES" ||
+      t === "WORK NOT APPLICABLE TO PROGRAM" ||
+      t === "FOR REGISTRAR'S OFFICE USE ONLY" ||
+      t === "LEGEND"
+    ) { end=i; break; }
+  }
+  return lines.slice(start, end);
+}
+
+function extractCourseSet(blockLines){
+  const s = new Set();
+  for (const ln of blockLines){
+    COURSE_RE.lastIndex = 0;
+    let m;
+    while ((m = COURSE_RE.exec(ln)) !== null){
+      s.add(`${m[1]} ${m[2]}`);
+    }
+  }
+  return s;
+}
+
+function parseCourses(raw, currentTerm){
+  const lines = U(raw).split("\n");
+
+  // Buckets (these headings appear in pasted DegreeWorks)
+  const inProgBlock = sliceBlock(lines, "IN-PROGRESS");
+  const notCountedBlock = sliceBlock(lines, "NOT COUNTED");
+  const freeElectivesBlock = sliceBlock(lines, "FREE ELECTIVES");
+  const notApplicableBlock = sliceBlock(lines, "WORK NOT APPLICABLE TO PROGRAM");
+
+  // Credits Applied header often exists inside these buckets (helpful for free-elective slot completion)
+  function bucketCreditsApplied(blockLines){
+    const joined = blockLines.join("\n");
+    const m = joined.match(/CREDITS\s+APPLIED:\s*(\d+)/i);
+    return m ? parseInt(m[1], 10) : 0;
+  }
+
+  const freeElectiveCreditsApplied = bucketCreditsApplied(freeElectivesBlock);
+  const inProgressCreditsApplied = bucketCreditsApplied(inProgBlock);
+
+  const inProgAll = extractCourseSet(inProgBlock);
+
+  // Build a map of course -> normalized term (e.g., SPRING 2026) from the IN-PROGRESS bucket.
+  const inProgTermByCourse = new Map();
+  for (const ln of inProgBlock){
+    const mt = ln.match(TERM_RE);
+    const nt = normTermFromMatch(mt);
+    if (!nt) continue;
+    const termStr = `${nt.term} ${nt.year}`;
+    COURSE_RE.lastIndex = 0;
+    let mm;
+    while ((mm = COURSE_RE.exec(ln)) !== null){
+      inProgTermByCourse.set(`${mm[1]} ${mm[2]}`, termStr);
+    }
+  }
+
+  // Current in-progress set is filtered by the manually selected semester (safer).
+  const curTermStr = currentTerm && currentTerm.term && currentTerm.year ? `${currentTerm.term} ${currentTerm.year}` : null;
+  const inProg = new Set();
+  if (curTermStr){
+    for (const [c,t] of inProgTermByCourse.entries()){
+      if (t === curTermStr) inProg.add(c);
+    }
+  } else {
+    for (const c of inProgAll) inProg.add(c);
+  }
+
+  const notCounted = extractCourseSet(notCountedBlock);
+  const notApplicable = extractCourseSet(notApplicableBlock);
+
+  // Helper: only count a line as a "real course row" if term appears at the END
+  const TERM_END_RE = /\b(FALL|SPRING|SUMMER|WINTER)\s*(\d{2}|\d{4})\s*$/i;
+
+  const done = new Set();
+  for (let i=0;i<lines.length;i++){
+    const ln = lines[i] || "";
+    const nxt = lines[i+1] || "";
+    // some rows wrap; inspect a small window
+    const win = (ln + " " + nxt).replace(/\s+/g," ").trim();
+
+    // Must have: a grade token + a course code token + a term at the end
+    if (!GRADE_RE.test(win)) continue;
+    if (!TERM_END_RE.test(win) && !TERM_RE.test(win)) continue;
+
+    // Guardrail: avoid requirement/legend sentences
+    if (win.includes("STILL NEEDED:") || win.includes("CHOOSE FROM") || win.includes("ATTRIBUTE")) continue;
+
+    // Strongest guard: end-of-line looks like a course row
+    const tail = win.slice(-28);
+    if (!TERM_END_RE.test(tail) && !TERM_END_RE.test(win)) continue;
+
+    COURSE_RE.lastIndex = 0;
+    let m;
+    while ((m = COURSE_RE.exec(win)) !== null){
+      const code = `${m[1]} ${m[2]}`;
+      if (inProg.has(code)) continue;
+      if (notCounted.has(code)) continue;
+      if (notApplicable.has(code)) continue;
+      done.add(code);
+    }
+  }
+
+  // Include Free Electives course codes (transfer electives often live here)
+  const freeElectives = extractCourseSet(freeElectivesBlock);
+  for (const c of freeElectives){
+    if (!inProg.has(c) && !notCounted.has(c) && !notApplicable.has(c)) done.add(c);
+  }
+
+  // Capture the in-progress term for advising.
+// Prefer the manually selected term; otherwise fall back to the first term found in the IN-PROGRESS bucket.
+  let inProgTerm = null;
+  if (currentTerm && currentTerm.term && currentTerm.year){
+    inProgTerm = {term: currentTerm.term, year: currentTerm.year};
+  } else {
+    for (const ln of inProgBlock){
+      const mt = ln.match(TERM_RE);
+      const nt = normTermFromMatch(mt);
+      if (nt){ inProgTerm = nt; break; }
+    }
+  }
+
+  return {
+    done,
+    inProg,
+    inProgAll,
+    notCounted,
+    notApplicable,
+    freeElectives,
+    inProgTerm,
+    freeElectiveCreditsApplied,
+    inProgressCreditsApplied,
+  };
+}
+
+/* =========================================
+   Requirement status parsing (Option A)
+   ========================================= */
+function statusWordToState(word){
+  if (!word) return null;
+  const w = word.trim();
+  if (w === "COMPLETE") return "done";
+  if (w.startsWith("COMPLETE EXCEPT")) return "ip";
+  if (w === "NOT YET COMPLETE") return "missing";
+  return null;
+}
+
+function parseReqStatuses(textU){
+  const m = new Map();
+
+  function findStatus(re, key){
+    const match = re.exec(textU);
+    if (!match) return;
+    const st = statusWordToState(match[1]);
+    if (st) m.set(key, st);
+  }
+
+  // ===== GenEd / BFA (DegreeWorks text uses “Complete”, “Not yet complete”, “Complete except for in-progress classes”) =====
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(A\)\s*NEW STUDENT SEMINAR/i, "GE_A");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(C1\)\s*COMMUNICATION:\s*WRITING/i, "GE_C1");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(C2\)\s*COMMUNICATION:\s*LITERATURE/i, "GE_C2");
+  // C3 sometimes appears as “COMMUNICATION: COMMUNICATION”
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(C3\)\s*COMMUNICATION:\s*COMMUNICATION/i, "GE_C3");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(F1\)\s*GREAT WORKS/i, "GE_F1");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(F2\)\s*PHILOSOPHICAL AND RELIGIOUS PERSPECTIVES/i, "GE_F2");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(G\)\s*COMPUTER SCIENCE/i, "GE_G");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+\(K1\)\s*SOCIAL SCIENCE/i, "GE_K1");
+
+  // ===== World Languages & Cultures (BFA) =====
+  // World Cultures requirement header is often just “WORLD CULTURES”
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+WORLD CULTURES/i, "WL_WCR");
+  // “World Language” header can be “WORLD LANGUAGES” or “WORLD LANGUAGE”
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+WORLD LANGUAGES?/i, "WL_LANG");
+
+  // ===== SEEDS (fallback, if that template is used) =====
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+EFFECTIVE WRITING\s+I/i, "SEEDS_EF1");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+EFFECTIVE WRITING\s+II/i, "SEEDS_EF2");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+INTERACTIVE COMMUNICATION/i, "SEEDS_ICO");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+POLITICAL AND CIVIC LIFE/i, "SEEDS_PCL");
+  findStatus(/(COMPLETE(?: EXCEPT FOR IN-PROGRESS CLASSES)?|NOT YET COMPLETE)\s+QUANTITATIVE REASONING/i, "SEEDS_QUR");
+
+  return m;
+}
+
+/* =========================================
+   Status evaluation
+   ========================================= */
+function icon(st){
+  if (st === "done") return `<span class="ok">☑</span>`;
+  if (st === "ip") return `<span class="ip">◐</span>`;
+  return `<span class="no">☐</span>`;
+}
+function label(st){
+  if (st === "done") return "Done";
+  if (st === "ip") return "In progress";
+  return "Missing";
+}
+
+function statusForItem(item, reqMap, courses, templateKey, textU){
+  if (item.type === "req"){
+    const st = reqMap.get(item.key);
+    if (st) return st;
+
+    // Extra deterministic fallbacks
+    if (item.key === "NSS"){
+      if (textU.includes("NEW STUDENT SEMINAR WAIVED") || textU.includes("NEW STUDENT SEMINAR WAIVER")) return "done";
+      if (courses.done.has("GNED 199") || courses.inProg.has("GNED 199")) return "done";
+    }
+    // World Languages (WL_1 / WL_2): DegreeWorks sometimes only gives a generic "WORLD LANGUAGES" status,
+// so we map that + actual course evidence into WL_1 and WL_2.
+if (item.key === "WL_1" || item.key === "WL_2"){
+  const wlStatus = reqMap.get("WL_LANG"); // "done" | "ip" | "missing" | undefined
+
+  // If DegreeWorks says the WL requirement is fully complete, mark both as done (covers 3-credit advanced placement cases).
+  if (wlStatus === "done") return "done";
+
+  const LANG_SUBJ = ["SPAN","JAPN","FREN","ITAL","GERM","CHIN","ARAB","KORE","KRNN","ASL","ASLA","RUSS","PORT","HEBR","LATN"];
+  const isLang = (code) => LANG_SUBJ.some(s => code.startsWith(s+" "));
+
+  const doneLang = [...courses.done].filter(isLang);
+  const ipLang = [...courses.inProg].filter(isLang);
+
+  // If DegreeWorks explicitly says not complete and we see no language evidence, treat as missing.
+  if (wlStatus === "missing" && doneLang.length === 0 && ipLang.length === 0) return "missing";
+
+  // Count distinct language courses (by subject+number)
+  const all = [...new Set([...doneLang, ...ipLang])];
+
+  // WL_1 state
+  if (item.key === "WL_1"){
+    if (doneLang.length >= 1) return "done";
+    if (ipLang.length >= 1) return "ip";
+    return (wlStatus === "ip") ? "ip" : "missing";
+  }
+
+  // WL_2 state
+  if (item.key === "WL_2"){
+    // If DegreeWorks says "complete except for in-progress", and we have one done + one in-progress, mark WL_2 as in-progress.
+    if (doneLang.length >= 1 && ipLang.length >= 1) return "ip";
+    if (doneLang.length >= 2) return "done";
+    if (all.length >= 2) return "ip"; // two language courses, but at least one is in-progress
+    // If WL block is "ip" but we only see one course line, still show WL_2 as ip to avoid false "missing" for wrapped/hidden rows.
+    if (wlStatus === "ip") return "ip";
+    return "missing";
+  }
+}
+return "missing";
+  }
+
+  if (item.type === "course"){
+    if (courses.done.has(item.code)) return "done";
+    if (courses.inProg.has(item.code)) return "ip";
+    return "missing";
+  }
+
+  return "missing";
+}
+
+function buildGuide(templateKey, template, reqMap, courses, textU){
+  const out = [];
+
+  // Allocate completed Free Elective credits into roadmap "Free Elective" slots (sequentially).
+  // This is what makes transfer students read correctly: if the Free Electives bucket shows
+  // 20 credits applied, then the first N free-elective slots in the roadmap should be checked.
+  let freeBudget = Number(courses.freeElectiveCreditsApplied || 0);
+  const reqCreditsFromLabel = (lbl)=>{
+    const m = (lbl || "").match(/\((\d+)\)\s*$/);
+    return m ? parseInt(m[1],10) : 3;
+  };
+
+
+  // Allocate ANIM elective slots using detected completed/in-progress ANIM courses
+  // that are NOT already explicit roadmap courses (e.g., ANIM 325, 360, 380, etc.).
+  const explicitCourseCodes = new Set();
+  for (const s of template.semesters){
+    for (const it of s.items){
+      if (it.type === "course" && it.code) explicitCourseCodes.add(it.code.toUpperCase().trim());
+    }
+  }
+  const anim300Done = [];
+  const anim300IP = [];
+  const anim400Done = [];
+  const anim400IP = [];
+  const isAnim = (c)=>/^ANIM\s+\d{3}[A-Z]?$/.test(c);
+  for (const c of (courses.done || [])){
+    const cc = (c || "").toUpperCase().trim();
+    if (!isAnim(cc)) continue;
+    if (explicitCourseCodes.has(cc)) continue;
+    const num = parseInt(cc.split(/\s+/)[1],10);
+    if (num >= 300 && num < 400) anim300Done.push(cc);
+    if (num >= 400 && num < 500) anim400Done.push(cc);
+  }
+  for (const c of (courses.inProg || [])){
+    const cc = (c || "").toUpperCase().trim();
+    if (!isAnim(cc)) continue;
+    if (explicitCourseCodes.has(cc)) continue;
+    const num = parseInt(cc.split(/\s+/)[1],10);
+    if (num >= 300 && num < 400) anim300IP.push(cc);
+    if (num >= 400 && num < 500) anim400IP.push(cc);
+  }
+
+  
+  // Allocate SCM elective slots based on completed/in-progress SCM courses (not already explicit roadmap courses).
+  const scmDone = [];
+  const scmIP = [];
+  const SCM_SUBJ = new Set(["CMST","CMDA","FMTV","JOUR","SPTC","STCM","WLNC"]);
+  const isSCM = (c)=>{
+    const parts = (c||"").split(/\s+/);
+    if (parts.length<2) return false;
+    const subj = parts[0];
+    if (!SCM_SUBJ.has(subj)) return false;
+    // Exclude the two required SCM core courses which are explicit in roadmap (CMST 110/210)
+    return true;
+  };
+  for (const c of (courses.done || [])){
+    const cc = (c||"").toUpperCase().trim();
+    if (!isSCM(cc)) continue;
+    if (explicitCourseCodes.has(cc)) continue;
+    scmDone.push(cc);
+  }
+  for (const c of (courses.inProg || [])){
+    const cc = (c||"").toUpperCase().trim();
+    if (!isSCM(cc)) continue;
+    if (explicitCourseCodes.has(cc)) continue;
+    scmIP.push(cc);
+  }
+
+  // Honors spillover -> Free Elective credits (conservative):
+  // If the audit has Honors Program and no explicit Free Electives bucket credit, count HONP elective courses
+  // (not the required HONP 100/101/102/103/301) as credit toward the 120-credit minimum.
+  if (freeBudget === 0 && textU.includes("HONORS PROGRAM")){
+    const HONP_REQUIRED = new Set(["HONP 100","HONP 101","HONP 102","HONP 103","HONP 301"]);
+    const honpElectiveCodes = [];
+    const addHonp = (setLike)=>{
+      for (const c of (setLike || [])){
+        const cc = (c||"").toUpperCase().trim();
+        if (!cc.startsWith("HONP ")) continue;
+        if (HONP_REQUIRED.has(cc)) continue;
+        honpElectiveCodes.push(cc);
+      }
+    };
+    addHonp(courses.done);
+    addHonp(courses.inProg);
+    // assume 3 credits each (true for HONP seminars in this audit)
+    freeBudget = honpElectiveCodes.length * 3;
+  }
+for (const sem of template.semesters){
+    out.push(`<div class="sem"><h3>${sem.title}</h3><ul class="list">`);
+    for (const item of sem.items){
+      let st = statusForItem(item, reqMap, courses, templateKey, textU);
+
+      if (item.type === "open"){
+        const lbl = (item.label || "").toUpperCase();
+        // Only auto-check FREE ELECTIVE open slots.
+        if (lbl.includes("FREE ELECTIVE")){
+          const need = reqCreditsFromLabel(item.label);
+          if (freeBudget >= need){
+            st = "done";
+            freeBudget -= need;
+          } else {
+            st = "missing";
+          }
+        } else if (lbl.includes("SCM") && lbl.includes("ELECTIVE")){
+          // Mark SCM elective slots using completed/in-progress SCM courses (FMTV/CMST/JOUR/etc.)
+          if (scmDone.length){
+            st = "done";
+            scmDone.shift();
+          } else if (scmIP.length){
+            st = "ip";
+            scmIP.shift();
+          } else {
+            st = "missing";
+          }
+        } else if (lbl.includes("ANIM 300-LEVEL ELECTIVE")){
+          // Mark 300-level elective slots based on completed/in-progress ANIM 3xx courses (not already explicit roadmap courses)
+          if (anim300Done.length){
+            st = "done";
+            anim300Done.shift();
+          } else if (anim300IP.length){
+            st = "ip";
+            anim300IP.shift();
+          } else {
+            st = "missing";
+          }
+        } else if (lbl.includes("ANIM 400-LEVEL ELECTIVE")){
+          // Mark 400-level elective slots based on completed/in-progress ANIM 4xx courses (not already explicit roadmap courses)
+          if (anim400Done.length){
+            st = "done";
+            anim400Done.shift();
+          } else if (anim400IP.length){
+            st = "ip";
+            anim400IP.shift();
+          } else {
+            st = "missing";
+          }
+        } else {
+          // Other open slots remain "Missing" by design (they require advisor choice).
+          st = "missing";
+        }
+      }
+
+      out.push(`<li>${icon(st)} <b>${item.label}</b> <span class="mono">(${label(st)})</span></li>`);
+    }
+    out.push(`</ul></div>`);
+  }
+  return out.join("");
+}
+
+/* =========================================
+   Advising (Priorities + Next two semesters)
+   Deterministic + conservative:
+   - Finish anything in-progress first.
+   - Then fill hard "Still Needed" requirements.
+   - Then electives/free slots.
+   ========================================= */
+
+function nextTermFromInProgress(inProgTerm){
+  // If Spring 2026 is in progress, next is Fall 2026.
+  if (!inProgTerm) return {term:"FALL", year:new Date().getFullYear()}; // fallback
+  const {term, year} = inProgTerm;
+  if (term === "SPRING") return {term:"FALL", year};
+  if (term === "FALL") return {term:"SPRING", year:year+1};
+  if (term === "SUMMER") return {term:"FALL", year};
+  if (term === "WINTER") return {term:"SPRING", year};
+  return {term:"FALL", year};
+}
+function followingTerm(t){
+  if (t.term === "FALL") return {term:"SPRING", year:t.year+1};
+  return {term:"FALL", year:t.year};
+}
+function fmtTerm(t){ return `${t.term[0]+t.term.slice(1).toLowerCase()} ${t.year}`; }
+
+function adviseSEEDS(reqMap, courses, textU){
+  const missing = (k)=> reqMap.get(k)==="missing" || !reqMap.has(k);
+  const ipReq = (k)=> reqMap.get(k)==="ip";
+
+  // Core missing flags from the pasted audit (deterministic)
+  const needICO = missing("SEEDS_ICO") || textU.includes("ATTRIBUTE ICO");
+  const needCMST210 = !courses.done.has("CMST 210") && !courses.inProg.has("CMST 210") && textU.includes("STILL NEEDED:") && textU.includes("CMST 210");
+  const needANIM321 = !courses.done.has("ANIM 321") && !courses.inProg.has("ANIM 321") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 321");
+  const needANIM325 = !courses.done.has("ANIM 325") && !courses.inProg.has("ANIM 325") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 325");
+  const needANIM360 = !courses.done.has("ANIM 360") && !courses.inProg.has("ANIM 360") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 360");
+  const needANIM380 = !courses.done.has("ANIM 380") && !courses.inProg.has("ANIM 380") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 380");
+  const needANIM401 = !courses.done.has("ANIM 401") && !courses.inProg.has("ANIM 401") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 401");
+  const needANIM423 = !courses.done.has("ANIM 423") && !courses.inProg.has("ANIM 423") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 423");
+  const needANIM424 = !courses.done.has("ANIM 424") && !courses.inProg.has("ANIM 424") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 424");
+
+  const need300Elective = textU.includes("300-LEVEL ELECTIVES") && textU.includes("STILL NEEDED:") && textU.includes("ANIM 301 OR 302 OR 330 OR 331 OR 335 OR 370");
+  const need400Electives = textU.includes("400-LEVEL ELECTIVES") && textU.includes("STILL NEEDED:") && textU.includes("2 CLASSES IN ANIM 400 OR 421 OR 425 OR 455");
+
+  // In progress items
+  const inProgList = [...courses.inProg].sort();
+
+  const priorities = [];
+  priorities.push("Finish all Spring in-progress courses (they unlock ‘Complete’ for PCL + World Language + LAA).");
+  if (needCMST210) priorities.push("CMST 210 (Theorizing Comm & Media) — required, currently missing.");
+  if (needANIM321) priorities.push("ANIM 321 (3D Animation & Rigging) — major gatekeeper.");
+  if (needICO) priorities.push("SEEDS: Interactive Communication (ICO attribute) — currently missing.");
+  if (needANIM325) priorities.push("ANIM 325 (Game Dev I) — schedule early if offered.");
+  if (needANIM360) priorities.push("ANIM 360 (Lighting/Rendering) — schedule early if offered.");
+  if (need300Elective) priorities.push("One ANIM 300-level elective (301/302/330/331/335/370) — at least 1 still needed.");
+  if (needANIM380) priorities.push("ANIM 380 (VFX for Film) — required.");
+  if (needANIM401) priorities.push("ANIM 401 (Industry Prep) — required (typically senior year).");
+  if (needANIM423 || needANIM424) priorities.push("Thesis sequence (ANIM 423 → ANIM 424) — senior-year planning.");
+  if (need400Electives) priorities.push("Two ANIM 400-level electives (400/421/425/455) — still needed.");
+
+  // Build next two semester recommendations (conservative: 4–5 courses, leave 1 slot flexible)
+  const next = [];
+  if (needCMST210) next.push("CMST 210 (Theorizing Comm & Media)");
+  if (needANIM321) next.push("ANIM 321 (3D Animation & Rigging)");
+  if (needICO) next.push("SEEDS ICO course (Interactive Communication attribute)");
+  // Prefer ANIM 325 or 360 if missing, but don’t overstuff if both missing
+  if (needANIM325) next.push("ANIM 325 (Game Dev I)");
+  else if (needANIM360) next.push("ANIM 360 (Lighting/Rendering)");
+  // Fill remaining with elective/free slot guidance
+  if (need300Elective) next.push("ANIM 300-level elective (301/302/330/331/335/370) — pick based on offering");
+  next.push("Free/Elective slot (as needed for 120 credits / MSU residency)");
+
+  const follow = [];
+  // Put the other one (325 vs 360) here
+  if (needANIM325 && !next.some(x=>x.startsWith("ANIM 325"))) follow.push("ANIM 325 (Game Dev I)");
+  if (needANIM360 && !next.some(x=>x.startsWith("ANIM 360"))) follow.push("ANIM 360 (Lighting/Rendering)");
+  if (needANIM380) follow.push("ANIM 380 (VFX for Film)");
+  if (need300Elective) follow.push("ANIM 300-level elective (second one if needed / desired)");
+  follow.push("Elective/Free slot (credits + residency)");
+
+  // If thesis/401 approaching, cue it
+  const seniorCue = [];
+  if (needANIM401) seniorCue.push("Plan ANIM 401 (Industry Prep) for senior year.");
+  if (needANIM423) seniorCue.push("Plan ANIM 423 (Thesis I) for senior fall, followed by ANIM 424 (Thesis II) in spring.");
+  if (need400Electives) seniorCue.push("Start mapping the two 400-level electives (400/421/425/455) around thesis load.");
+
+  return {inProgList, priorities, next, follow, seniorCue};
+}
+
+function extractCredits(textU){
+  const req = (textU.match(/CREDITS REQUIRED:\s*(\d+)/i) || [])[1];
+  const applied = (textU.match(/CREDITS APPLIED:\s*(\d+)/i) || [])[1];
+  const required = req ? parseInt(req,10) : null;
+  const have = applied ? parseInt(applied,10) : null;
+  const remaining = (required!=null && have!=null) ? Math.max(required - have, 0) : null;
+  return {required, have, remaining};
+}
+
+function extractMajorNeeds(textU){
+  const needs = [];
+  function grab(re, label){
+    if (re.test(textU)) needs.push(label);
+  }
+  grab(/STILL NEEDED:\s*1\s*CLASS\s*IN\s*ANIM\s*360/i, "ANIM 360 (VFX, Lighting, and Rendering)");
+  grab(/STILL NEEDED:\s*1\s*CLASS\s*IN\s*ANIM\s*380/i, "ANIM 380 (VFX for Film)");
+  grab(/STILL NEEDED:\s*1\s*CLASS\s*IN\s*ANIM\s*401/i, "ANIM 401 (Industry Preparation)");
+  grab(/STILL NEEDED:\s*1\s*CLASS\s*IN\s*ANIM\s*423/i, "ANIM 423 (Thesis I)");
+  grab(/STILL NEEDED:\s*1\s*CLASS\s*IN\s*ANIM\s*424/i, "ANIM 424 (Thesis II)");
+  // electives
+  grab(/STILL NEEDED:\s*2\s*CLASSES\s*IN\s*ANIM\s*400/i, "2× 400-level ANIM electives (ANIM 400/421/425/455 etc.)");
+  grab(/STILL NEEDED:\s*2\s*CLASSES\s*IN\s*CMDA\s*100:499/i, "2× SCM elective courses (CMDA/CMST/FMTV/JOUR/SPTC/STCM)");
+  return needs;
+}
+
+function adviseGenEd(reqMap, courses, textU){
+  const inProgList = [...courses.inProg].sort();
+
+  // DegreeWorks status-driven GenEd/WL gaps
+  const genedMissing = [];
+  const genedIP = [];
+  function pushByState(key, label){
+    const st = reqMap.get(key);
+    if (st === "missing") genedMissing.push(label);
+    else if (st === "ip") genedIP.push(label);
+  }
+  pushByState("GE_C1", "(C1) Communication: Writing");
+  pushByState("GE_C2", "(C2) Communication: Literature");
+  pushByState("GE_C3", "(C3) Communication: Communication");
+  pushByState("GE_F1", "(F1) Great Works & Their Influences");
+  pushByState("GE_F2", "(F2) Philosophical & Religious Perspectives");
+  pushByState("GE_G", "(G) Computer Science");
+  pushByState("GE_K1", "(K1) Social Science: American/European History");
+  pushByState("GE_A", "(A) New Student Seminar");
+
+  // World Languages & Cultures
+  const wlMissing = [];
+  const wlIP = [];
+  const wcr = reqMap.get("WL_WCR");
+  if (wcr === "missing") wlMissing.push("World Cultures (WCR)");
+  else if (wcr === "ip") wlIP.push("World Cultures (WCR) — in progress");
+  const wlang = reqMap.get("WL_LANG");
+  if (wlang === "missing") wlMissing.push("World Language (placement-dependent)");
+  else if (wlang === "ip") wlIP.push("World Language — in progress");
+
+  // Major needs from “Still Needed” lines
+  const majorNeeds = extractMajorNeeds(textU);
+
+  const credits = extractCredits(textU);
+
+  // Priorities (order matters)
+  const priorities = [];
+  if (inProgList.length) priorities.push(`Finish in-progress courses cleanly: ${inProgList.join(", ")}`);
+  if (genedMissing.length) priorities.push(`Finish remaining GenEd items: ${genedMissing.join("; ")}`);
+  if (wlMissing.length) priorities.push(`Start/finish World Languages & Cultures: ${wlMissing.join("; ")}`);
+  if (majorNeeds.length) priorities.push(`Plan remaining Major requirements early (prereqs + offering cycles): ${majorNeeds.slice(0,3).join("; ")}${majorNeeds.length>3 ? " …" : ""}`);
+  if (credits.remaining != null) priorities.push(`Track total credits: ${credits.have}/${credits.required} applied (≈${credits.remaining} credits remaining)`);
+
+  // Suggested schedule: priority-based, not a live schedule pull
+  const next = [];
+  const follow = [];
+
+  // NEXT TERM: aim for 1 Major req + 1 GenEd/WL gap + 1 elective (keep load normal)
+  const majorFirst = majorNeeds.find(x=>x.startsWith("ANIM 360")) || majorNeeds.find(x=>x.startsWith("ANIM 380")) || majorNeeds.find(x=>x.startsWith("ANIM 401")) || null;
+  if (majorFirst) next.push(`Major requirement (pick based on offering): ${majorFirst}`);
+  if (genedMissing.includes("(F2) Philosophical & Religious Perspectives")) next.push("GenEd: take one GEF2 course (F2) — get it out of the way");
+  else if (genedMissing.length) next.push(`GenEd: take one missing category (${genedMissing[0]})`);
+  if (wcr === "missing") next.push("World Cultures: take 1 WCR course");
+  else if (wlang === "missing") next.push("World Language: take placement-appropriate language course");
+  // If none of the above filled 3-4 items, add electives
+  if (next.length < 3) next.push("Elective: SCM elective or free elective (to keep credit momentum)");
+
+  // FOLLOWING TERM: second Major req + remaining GenEd/WL + elective
+  const majorSecond = majorNeeds.filter(x=>x!==majorFirst)[0] || null;
+  if (majorSecond) follow.push(`Major requirement: ${majorSecond}`);
+  if (wlang === "missing") follow.push("World Language: continue sequence (or complete intermediate/advanced if placed)");
+  if (wcr === "missing") follow.push("World Cultures: if not taken yet, take WCR");
+  if (genedMissing.length > 1) follow.push(`GenEd: next missing category (${genedMissing[1]})`);
+  follow.push("Elective: ANIM 400-level elective (when eligible) or SCM elective");
+
+  const seniorCue = [];
+  if (majorNeeds.some(x=>x.includes("Thesis"))) seniorCue.push("Thesis I/II are usually senior-year sequenced — keep prerequisites and timing in mind.");
+  if (majorNeeds.some(x=>x.includes("ANIM 401"))) seniorCue.push("Industry Prep (ANIM 401) often pairs well with portfolio/resume planning — don’t leave it to the last semester.");
+
+  return {inProgList, priorities, next, follow, seniorCue};
+}
+
+function buildAdvice(templateKey, reqMap, courses, textU){
+  const isSEEDS = templateKey === "seeds2025";
+  const bundle = isSEEDS ? adviseSEEDS(reqMap, courses, textU) : adviseGenEd(reqMap, courses, textU);
+
+  const t1 = nextTermFromInProgress(courses.inProgTerm);
+  const t2 = followingTerm(t1);
+
+  const tags = [];
+  if (textU.includes("NEW STUDENT SEMINAR WAIVED") || textU.includes("NEW STUDENT SEMINAR WAIVER")) tags.push("NSS = Waived ✅");
+  if (reqMap.get("SEEDS_ICO")==="missing") tags.push("ICO missing");
+  if (reqMap.get("SEEDS_PCL")==="ip") tags.push("PCL in progress");
+  if (reqMap.get("WL_2")==="ip") tags.push("World Language II in progress");
+
+  return `
+    <div class="adviceBox">
+      <div style="margin-bottom:10px;">
+        ${tags.map(t=>`<span class="tag">${t}</span>`).join("") || `<span class="tag">—</span>`}
+      </div>
+
+      <div class="small" style="margin-bottom:10px;">
+        <b>In-progress right now:</b> <span class="mono">${bundle.inProgList.join(", ") || "—"}</span>
+      </div>
+
+      <div class="adviceGrid">
+        <div class="sem">
+          <h4>Priorities (order matters)</h4>
+          <ol class="list">
+            ${bundle.priorities.map(p=>`<li>${p}</li>`).join("")}
+          </ol>
+        </div>
+
+        <div class="sem">
+          <h4>Suggested schedule</h4>
+          <div class="small"><b>Next:</b> ${fmtTerm(t1)}</div>
+          <ul class="list">${bundle.next.map(x=>`<li>${x}</li>`).join("")}</ul>
+          <div class="small" style="margin-top:10px;"><b>Following:</b> ${fmtTerm(t2)}</div>
+          <ul class="list">${bundle.follow.map(x=>`<li>${x}</li>`).join("")}</ul>
+        </div>
+      </div>
+
+      ${bundle.seniorCue.length ? `
+        <div class="sem" style="margin-top:10px;">
+          <h4>Senior-year heads-up</h4>
+          <ul class="list">${bundle.seniorCue.map(x=>`<li>${x}</li>`).join("")}</ul>
+        </div>
+      ` : ""}
+
+      <div class="small warn" style="margin-top:10px;">
+        Note: course availability + prerequisites can vary. This is a priority-based plan from DegreeWorks signals, not a live schedule pull.
+      </div>
+    </div>
+  `;
+}
+
+/* =========================================
+   Checklist + report
+   ========================================= */
+function buildReportText(templateKey, template, reqMap, courses, textU){
+  const lines = [];
+  lines.push(`Advising Robot — Option A+ Report`);
+  lines.push(`Template: ${template.name}`);
+  lines.push(``);
+
+  lines.push(`Requirement statuses detected (DegreeWorks words):`);
+  const keys = [...reqMap.keys()].sort();
+  if (!keys.length) lines.push(`  - (none detected)`);
+  for (const k of keys) lines.push(`  - ${k}: ${reqMap.get(k)}`);
+  lines.push(``);
+
+  lines.push(`DONE courses:`);
+  [...courses.done].sort().forEach(x=>lines.push(`  - ${x}`));
+  lines.push(``);
+  lines.push(`IN PROGRESS courses:`);
+  [...courses.inProg].sort().forEach(x=>lines.push(`  - ${x}`));
+  lines.push(``);
+
+  // Advice summary (priority-based)
+  const t1 = nextTermFromInProgress(courses.inProgTerm);
+  const t2 = followingTerm(t1);
+  const a = (templateKey === "seeds2025") ? adviseSEEDS(reqMap, courses, textU) : adviseGenEd(reqMap, courses, textU);
+
+  lines.push(`ADVICE — Priorities:`);
+  a.priorities.forEach(p=>lines.push(`  - ${p}`));
+  lines.push(``);
+
+  lines.push(`ADVICE — Suggested next: ${fmtTerm(t1)}`);
+  a.next.forEach(x=>lines.push(`  - ${x}`));
+  lines.push(``);
+
+  lines.push(`ADVICE — Following: ${fmtTerm(t2)}`);
+  a.follow.forEach(x=>lines.push(`  - ${x}`));
+  lines.push(``);
+
+  if (a.seniorCue && a.seniorCue.length){
+    lines.push(`ADVICE — Senior-year heads-up:`);
+    a.seniorCue.forEach(x=>lines.push(`  - ${x}`));
+    lines.push(``);
+  }
+
+  lines.push(`PDF CHECKLIST (roadmap order):`);
+  let freeBudget = Number(courses.freeElectiveCreditsApplied || 0);
+  const reqCreditsFromLabel = (lbl)=>{
+    const m = (lbl || "").match(/\((\d+)\)\s*$/);
+    return m ? parseInt(m[1],10) : 3;
+  };
+  for (const sem of template.semesters){
+    lines.push(``);
+    lines.push(`${sem.title}`);
+    for (const item of sem.items){
+      let st = statusForItem(item, reqMap, courses, templateKey, textU);
+      if (item.type === "open"){
+        const lbl = (item.label || "").toUpperCase();
+        if (lbl.includes("FREE ELECTIVE")){
+          const need = reqCreditsFromLabel(item.label);
+          if (freeBudget >= need){ st = "done"; freeBudget -= need; }
+          else st = "missing";
+        } else {
+          st = "missing";
+        }
+      }
+      const mark = st === "done" ? "[X]" : (st === "ip" ? "[~]" : "[ ]");
+      lines.push(`  ${mark} ${item.label}`);
+    }
+  }
+  lines.push(``);
+  lines.push(`Legend: [X]=Done, [~]=In progress, [ ]=Missing`);
+  return lines.join("\n");
+}
+
+function render(){
+  const raw = document.getElementById("dw").value || "";
+  const textU = U(raw);
+
+  const manual = document.getElementById("template").value;
+  const detected = detectTemplate(textU);
+  const chosenKey = (manual === "auto") ? detected.key : manual;
+  const template = TEMPLATES[chosenKey];
+
+  const currentTerm = getCurrentTermSelection();
+  const courses = parseCourses(raw, currentTerm);
+  const reqMap = parseReqStatuses(textU);
+
+  // Enforce NSS done when waived appears
+  if (textU.includes("NEW STUDENT SEMINAR WAIVED") || textU.includes("NEW STUDENT SEMINAR WAIVER")) reqMap.set("GE_A","done");
+
+  document.getElementById("detected").innerHTML =
+    `<span class="mono">Detected</span>: <b>${TEMPLATES[detected.key].name}</b> · <span class="mono">confidence</span>: ${detected.confidence}
+     <br/><span class="mono">Using</span>: <b>${template.name}</b>`;
+
+  const totalRows = template.semesters.reduce((a,s)=>a+s.items.length,0);
+  // Count rows using the same allocation rules as the visual checklist.
+  let freeBudget = Number(courses.freeElectiveCreditsApplied || 0);
+  const reqCreditsFromLabel = (lbl)=>{
+    const m = (lbl || "").match(/\((\d+)\)\s*$/);
+    return m ? parseInt(m[1],10) : 3;
+  };
+
+  // Elective budgets (ANIM 3xx / 4xx not already explicit roadmap courses)
+  const explicitCourseCodes = new Set();
+  for (const s of template.semesters){
+    for (const it of s.items){
+      if (it.type === "course" && it.code) explicitCourseCodes.add(it.code.toUpperCase().trim());
+    }
+  }
+  const anim300Done = [];
+  const anim300IP = [];
+  const anim400Done = [];
+  const anim400IP = [];
+  const isAnim = (c)=>/^ANIM\s+\d{3}[A-Z]?$/.test(c);
+  for (const c of (courses.done || [])){
+    const cc = (c || "").toUpperCase().trim();
+    if (!isAnim(cc)) continue;
+    if (explicitCourseCodes.has(cc)) continue;
+    const num = parseInt(cc.split(/\s+/)[1],10);
+    if (num >= 300 && num < 400) anim300Done.push(cc);
+    if (num >= 400 && num < 500) anim400Done.push(cc);
+  }
+  for (const c of (courses.inProg || [])){
+    const cc = (c || "").toUpperCase().trim();
+    if (!isAnim(cc)) continue;
+    if (explicitCourseCodes.has(cc)) continue;
+    const num = parseInt(cc.split(/\s+/)[1],10);
+    if (num >= 300 && num < 400) anim300IP.push(cc);
+    if (num >= 400 && num < 500) anim400IP.push(cc);
+  }
+
+  let doneRows = 0, ipRows = 0;
+  for (const sem of template.semesters){
+    for (const item of sem.items){
+      let st = statusForItem(item, reqMap, courses, chosenKey, textU);
+      if (item.type === "open"){
+        const lbl = (item.label || "").toUpperCase();
+        if (lbl.includes("FREE ELECTIVE")){
+          const need = reqCreditsFromLabel(item.label);
+          if (freeBudget >= need){ st = "done"; freeBudget -= need; }
+          else st = "missing";
+        } else if (lbl.includes("ANIM 300-LEVEL ELECTIVE")){
+          if (anim300Done.length){ st = "done"; anim300Done.shift(); }
+          else if (anim300IP.length){ st = "ip"; anim300IP.shift(); }
+          else st = "missing";
+        } else if (lbl.includes("ANIM 400-LEVEL ELECTIVE")){
+          if (anim400Done.length){ st = "done"; anim400Done.shift(); }
+          else if (anim400IP.length){ st = "ip"; anim400IP.shift(); }
+          else st = "missing";
+        } else {
+          st = "missing";
+        }
+      }
+      if (st === "done") doneRows++;
+      else if (st === "ip") ipRows++;
+    }
+  }
+
+  document.getElementById("pills").innerHTML = `
+    <div class="pill">${icon("done")} <b>${doneRows}</b> / ${totalRows} rows done</div>
+    <div class="pill">${icon("ip")} <b>${ipRows}</b> rows in progress</div>
+    <div class="pill"><span class="mono">courses done</span> <b>${courses.done.size}</b></div>
+    <div class="pill"><span class="mono">courses in progress (selected term)</span> <b>${courses.inProg.size}</b></div>
+    <div class="pill"><span class="mono">courses in progress (all)</span> <b>${(courses.inProgAll||new Set()).size}</b></div>
+  `;
+
+  const reqKeys = [...reqMap.keys()].sort();
+  document.getElementById("reqdebug").innerHTML =
+    reqKeys.length
+      ? `<div class="mono">${reqKeys.map(k=>`${k}=${reqMap.get(k)}`).join(" · ")}</div>`
+      : `<div class="warn">No requirement-status signals detected. (Paste may be truncated.)</div>`;
+
+  document.getElementById("coursedebug").innerHTML = `
+    <div class="small">
+      <b>In-progress (selected term):</b> <span class="mono">${[...courses.inProg].sort().join(", ") || "—"}</span><br/>
+      <b>In-progress (all terms):</b> <span class="mono">${[...(courses.inProgAll||new Set())].sort().join(", ") || "—"}</span><br/>
+      <b>Done course lines:</b> <span class="mono">${[...courses.done].sort().slice(0,30).join(", ")}${courses.done.size>30 ? " …" : ""}</span>
+    </div>
+  `;
+
+  document.getElementById("advice").innerHTML = buildAdvice(chosenKey, reqMap, courses, textU);
+  document.getElementById("guide").innerHTML = buildGuide(chosenKey, template, reqMap, courses, textU);
+
+  window.__lastReportText = buildReportText(chosenKey, template, reqMap, courses, textU);
+}
+
+function downloadReport(){
+  const text = window.__lastReportText || "Run the generator first.";
+  const blob = new Blob([text], {type:"text/plain;charset=utf-8"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "advising_robot_report_optionA_plus.txt";
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(()=>{ URL.revokeObjectURL(a.href); a.remove(); }, 200);
+}
+
+
+function getCurrentTermSelection(){
+  const termEl = document.getElementById("curTerm");
+  const yearEl = document.getElementById("curYear");
+  const term = termEl ? termEl.value : null;
+  const year = yearEl ? parseInt(yearEl.value,10) : null;
+  if (!term || !year || Number.isNaN(year)) return null;
+  return {term, year};
+}
+
+document.getElementById("runBtn").addEventListener("click", render);
+
+document.getElementById("downloadBtn").addEventListener("click", downloadReport);
+document.getElementById("clearBtn").addEventListener("click", ()=>{
+  document.getElementById("dw").value = "";
+  document.getElementById("detected").innerHTML = "—";
+  document.getElementById("pills").innerHTML = "";
+  document.getElementById("reqdebug").innerHTML = "Run the generator.";
+  document.getElementById("coursedebug").innerHTML = "Run the generator.";
+  document.getElementById("advice").innerHTML = "Run the generator.";
+  document.getElementById("guide").innerHTML = "Run the generator.";
+  window.__lastReportText = "";
+});
+</script>
+
+</body>
+</html>
