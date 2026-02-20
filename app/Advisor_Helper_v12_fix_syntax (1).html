@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advisor Helper v12</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #131a33;
+      --muted: #9cb0d8;
+      --text: #eef3ff;
+      --accent: #69b2ff;
+      --ok: #56d68a;
+      --warn: #ffce6b;
+    }
+    body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 20px; }
+    h1 { margin-top: 0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .panel { background: var(--panel); border-radius: 12px; padding: 14px; }
+    textarea { width: 100%; min-height: 180px; resize: vertical; background: #0d1430; color: var(--text); border: 1px solid #33436f; border-radius: 10px; padding: 10px; }
+    input[type="file"] { width: 100%; margin-bottom: 8px; }
+    button { background: var(--accent); color: #06142a; border: 0; border-radius: 10px; padding: 10px 14px; cursor: pointer; font-weight: 700; }
+    button:hover { filter: brightness(1.08); }
+    .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .kpi { background: #0d1430; border-radius: 10px; padding: 8px 10px; }
+    .tag { display: inline-block; background: #1c284f; color: var(--muted); border: 1px solid #2f4275; border-radius: 999px; padding: 4px 8px; margin: 3px 3px 0 0; font-size: 12px; }
+    .ok { color: var(--ok); }
+    .warn { color: var(--warn); }
+    pre { white-space: pre-wrap; background: #0d1430; border: 1px solid #33436f; border-radius: 10px; padding: 10px; max-height: 420px; overflow: auto; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Advisor Helper v12 — Gen Ed / SEEDS Course Mapper</h1>
+  <p>Paste student degree data or upload files. This version improves <strong>World Cultures detection</strong>, <strong>major/minor elective handling</strong>, and <strong>student type classification</strong>.</p>
+
+  <div class="grid">
+    <section class="panel">
+      <h2>1) Student Data Input</h2>
+      <input id="studentFile" type="file" multiple accept=".txt,.csv,.md,.pdf" />
+      <textarea id="studentText" placeholder="Paste student degree audit/transcript text here..."></textarea>
+      <div class="row" style="margin-top:8px;">
+        <button id="loadStudentBtn">Load Selected Student Files</button>
+        <span id="studentStatus"></span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>2) Program Resources (from /resources)</h2>
+      <input id="resourceFiles" type="file" multiple accept=".txt,.csv,.md,.pdf" />
+      <textarea id="resourceText" placeholder="Paste extracted text from your Gen Ed + SEEDS PDFs and policy notes here..."></textarea>
+      <div class="row" style="margin-top:8px;">
+        <button id="loadResourcesBtn">Load Selected Resource Files</button>
+        <span id="resourceStatus"></span>
+      </div>
+    </section>
+  </div>
+
+  <section class="panel" style="margin-top:16px;">
+    <div class="row">
+      <button id="analyzeBtn">Analyze Student</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+    <div class="row" style="margin-top:10px;">
+      <div class="kpi">Student Type: <strong id="studentType">—</strong></div>
+      <div class="kpi">World Cultures: <strong id="worldCultures">—</strong></div>
+      <div class="kpi">Detected Courses: <strong id="courseCount">0</strong></div>
+    </div>
+  </section>
+
+  <div class="grid" style="margin-top:16px;">
+    <section class="panel">
+      <h2>Detected Student Profile</h2>
+      <div><strong>Majors</strong><div id="majors"></div></div>
+      <div style="margin-top:8px;"><strong>Minors</strong><div id="minors"></div></div>
+      <div style="margin-top:8px;"><strong>World Cultures Evidence</strong><div id="wcEvidence"></div></div>
+      <div style="margin-top:8px;"><strong>Elective Candidates</strong><div id="electives"></div></div>
+    </section>
+
+    <section class="panel">
+      <h2>Advising Output (for PDF fill-in)</h2>
+      <pre id="output"></pre>
+    </section>
+  </div>
+</div>
+
+<script>
+const WC_KEYWORDS = [
+  "world cultures", "global cultures", "cultural anthropology", "african", "latin american",
+  "asian", "middle eastern", "diaspora", "intercultural", "cross-cultural", "global studies",
+  "international studies", "comparative cultures", "civilizations", "non-western"
+];
+
+const GENED_MARKERS = ["gen ed", "general education", "montclair core", "world cultures", "quantitative reasoning"];
+const SEEDS_MARKERS = ["seeds", "social justice", "equity", "inclusion", "diversity", "community engaged"];
+
+const CATEGORY_HINTS = {
+  "World Cultures": ["world cultures", "global", "culture", "international"],
+  "Writing": ["writing", "english composition", "first year writing"],
+  "Math": ["math", "statistics", "quantitative"],
+  "Science": ["biology", "chemistry", "physics", "lab"],
+  "Humanities": ["history", "philosophy", "literature", "religion"],
+  "Social Science": ["psych", "sociology", "political", "economics", "anthropology"]
+};
+
+function normalizeText(t) {
+  return (t || "").replace(/\r/g, "\n").replace(/[ \t]+/g, " ").replace(/\n{3,}/g, "\n\n").trim();
+}
+
+function uniq(arr) {
+  return [...new Set(arr.filter(Boolean))];
+}
+
+function detectStudentType(allText) {
+  const text = allText.toLowerCase();
+  let genedScore = 0, seedsScore = 0;
+  GENED_MARKERS.forEach(m => { if (text.includes(m)) genedScore += 2; });
+  SEEDS_MARKERS.forEach(m => { if (text.includes(m)) seedsScore += 2; });
+
+  if (/\bseed(s)?\b/.test(text)) seedsScore += 3;
+  if (/\bgen(eral)?\s*ed(ucation)?\b/.test(text)) genedScore += 3;
+
+  if (seedsScore > genedScore) return "SEEDS";
+  if (genedScore > seedsScore) return "Gen Ed";
+  return "Unclear (needs policy context)";
+}
+
+function extractCourses(text) {
+  const lines = text.split("\n");
+  const out = [];
+  const regex = /\b([A-Z]{2,4})[-\s]?([0-9]{3}[A-Z]?)\b(?:\s*[-:]\s*(.*))?/;
+  for (const raw of lines) {
+    const line = raw.trim();
+    const m = line.match(regex);
+    if (!m) continue;
+    const code = `${m[1]} ${m[2]}`;
+    const title = (m[3] || "").trim();
+    out.push({ code, title, raw: line });
+  }
+  return uniq(out.map(o => JSON.stringify(o))).map(s => JSON.parse(s));
+}
+
+function extractProgramNames(text, labelRegexList) {
+  const lines = text.split("\n");
+  const found = [];
+  for (const ln of lines) {
+    for (const rx of labelRegexList) {
+      const m = ln.match(rx);
+      if (m?.[1]) {
+        found.push(m[1].replace(/\s{2,}/g, " ").trim());
+      }
+    }
+  }
+  return uniq(found);
+}
+
+function detectWorldCultures(courses, mergedText) {
+  const evidence = [];
+  for (const c of courses) {
+    const courseLine = `${c.code} ${c.title}`.toLowerCase();
+    const hit = WC_KEYWORDS.some(k => courseLine.includes(k));
+    if (hit) evidence.push(`${c.code}${c.title ? " — " + c.title : ""}`);
+  }
+
+  // Catch transcript notes that explicitly mark requirement completion.
+  const textLower = mergedText.toLowerCase();
+  if (/world cultures[^\n]{0,40}(satisfied|complete|completed|met|done|taken)/i.test(mergedText)) {
+    evidence.push("Requirement status line indicates World Cultures is completed");
+  }
+
+  return { completed: evidence.length > 0, evidence: uniq(evidence) };
+}
+
+function detectElectives(courses, majors, minors) {
+  const anchors = [...majors, ...minors].join(" ").toLowerCase();
+  const majorHintTokens = anchors.split(/[^a-z]+/).filter(w => w.length > 3);
+
+  return courses.filter(c => {
+    const line = `${c.code} ${c.title}`.toLowerCase();
+    const obviousGenEd = Object.values(CATEGORY_HINTS).flat().some(k => line.includes(k));
+    const relatedToMajorMinor = majorHintTokens.some(tok => line.includes(tok));
+
+    // Mark as elective candidate when related to major/minor or not obviously in GenEd buckets.
+    return relatedToMajorMinor || !obviousGenEd;
+  }).map(c => `${c.code}${c.title ? " — " + c.title : ""}`);
+}
+
+function mapCoursesToCategories(courses) {
+  const map = {};
+  for (const category of Object.keys(CATEGORY_HINTS)) map[category] = [];
+  map["Unmapped"] = [];
+
+  for (const c of courses) {
+    const line = `${c.code} ${c.title}`.toLowerCase();
+    let matched = false;
+    for (const [category, hints] of Object.entries(CATEGORY_HINTS)) {
+      if (hints.some(h => line.includes(h))) {
+        map[category].push(`${c.code}${c.title ? " — " + c.title : ""}`);
+        matched = true;
+        break;
+      }
+    }
+    if (!matched) map["Unmapped"].push(`${c.code}${c.title ? " — " + c.title : ""}`);
+  }
+  return map;
+}
+
+function buildRecommendations(profile) {
+  const recs = [];
+  if (!profile.worldCultures.completed) {
+    recs.push("Prioritize a World Cultures-tagged course next semester.");
+  }
+  if (profile.categories["Writing"].length === 0) {
+    recs.push("Add a writing-intensive or composition requirement in the upcoming term.");
+  }
+  if (profile.categories["Math"].length === 0) {
+    recs.push("Plan a quantitative course (Math/Stats) within next 1-2 terms.");
+  }
+  if (profile.electives.length < 2) {
+    recs.push("Review secondary major/minor courses for elective credit opportunities.");
+  }
+  if (recs.length === 0) {
+    recs.push("Most core areas appear represented. Focus on sequence prerequisites and graduation credit totals.");
+  }
+  return recs;
+}
+
+function renderTags(el, items, empty = "None detected") {
+  el.innerHTML = "";
+  if (!items.length) {
+    el.innerHTML = `<span class="tag">${empty}</span>`;
+    return;
+  }
+  items.forEach(i => {
+    const tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = i;
+    el.appendChild(tag);
+  });
+}
+
+async function readFileAsText(file) {
+  if (file.name.toLowerCase().endsWith(".pdf")) {
+    return `[PDF attached: ${file.name}]\nPlease paste extracted text from this PDF (or use browser PDF text copy) for best results.\n`;
+  }
+  return await file.text();
+}
+
+async function loadFiles(inputEl, targetEl, statusEl) {
+  const files = [...inputEl.files];
+  if (!files.length) {
+    statusEl.textContent = "No files selected.";
+    statusEl.className = "warn";
+    return;
+  }
+  const chunks = [];
+  for (const f of files) {
+    chunks.push(`\n===== ${f.name} =====\n` + await readFileAsText(f));
+  }
+  targetEl.value = normalizeText(targetEl.value + "\n" + chunks.join("\n"));
+  statusEl.textContent = `Loaded ${files.length} file(s).`;
+  statusEl.className = "ok";
+}
+
+function analyze() {
+  const studentText = normalizeText(document.getElementById("studentText").value);
+  const resourceText = normalizeText(document.getElementById("resourceText").value);
+  const merged = `${studentText}\n\n${resourceText}`;
+
+  const courses = extractCourses(merged);
+  const majors = extractProgramNames(merged, [
+    /(?:primary\s+)?major\s*[:\-]\s*(.+)/i,
+    /program\s*[:\-]\s*(.+)/i,
+    /second\s+major\s*[:\-]\s*(.+)/i
+  ]);
+  const minors = extractProgramNames(merged, [
+    /minor\s*[:\-]\s*(.+)/i,
+    /secondary\s+minor\s*[:\-]\s*(.+)/i
+  ]);
+
+  const worldCultures = detectWorldCultures(courses, merged);
+  const studentType = detectStudentType(merged);
+  const categories = mapCoursesToCategories(courses);
+  const electives = detectElectives(courses, majors, minors);
+
+  const profile = { courses, majors, minors, worldCultures, studentType, categories, electives };
+  const recs = buildRecommendations(profile);
+
+  document.getElementById("studentType").textContent = studentType;
+  document.getElementById("worldCultures").textContent = worldCultures.completed ? "Completed/Detected" : "Not found yet";
+  document.getElementById("worldCultures").className = worldCultures.completed ? "ok" : "warn";
+  document.getElementById("courseCount").textContent = String(courses.length);
+
+  renderTags(document.getElementById("majors"), majors);
+  renderTags(document.getElementById("minors"), minors);
+  renderTags(document.getElementById("wcEvidence"), worldCultures.evidence, "No evidence found");
+  renderTags(document.getElementById("electives"), electives, "No elective candidates yet");
+
+  const output = [];
+  output.push(`STUDENT TYPE: ${studentType}`);
+  output.push(`WORLD CULTURES: ${worldCultures.completed ? "MET" : "NOT CLEAR"}`);
+  output.push(`\nMAJOR(S): ${majors.join("; ") || "None detected"}`);
+  output.push(`MINOR(S): ${minors.join("; ") || "None detected"}`);
+  output.push("\nCOURSE MAPPING FOR PDF ENTRY:");
+  for (const [cat, list] of Object.entries(categories)) {
+    output.push(`- ${cat}:`);
+    output.push(...(list.length ? list.map(x => `  • ${x}`) : ["  • (none)"]));
+  }
+  output.push("\nELECTIVE CANDIDATES (include secondary major/minor where allowed):");
+  output.push(...(electives.length ? electives.map(x => `  • ${x}`) : ["  • (none)"]));
+  output.push("\nRECOMMENDATIONS (this semester / next semester):");
+  output.push(...recs.map(r => `  • ${r}`));
+
+  document.getElementById("output").textContent = output.join("\n");
+}
+
+function clearAll() {
+  ["studentText", "resourceText", "output"].forEach(id => document.getElementById(id).value = "");
+  document.getElementById("output").textContent = "";
+  ["majors", "minors", "wcEvidence", "electives"].forEach(id => document.getElementById(id).innerHTML = "");
+  document.getElementById("studentType").textContent = "—";
+  document.getElementById("worldCultures").textContent = "—";
+  document.getElementById("courseCount").textContent = "0";
+  document.getElementById("studentStatus").textContent = "";
+  document.getElementById("resourceStatus").textContent = "";
+}
+
+document.getElementById("loadStudentBtn").addEventListener("click", () => loadFiles(
+  document.getElementById("studentFile"),
+  document.getElementById("studentText"),
+  document.getElementById("studentStatus")
+));
+
+document.getElementById("loadResourcesBtn").addEventListener("click", () => loadFiles(
+  document.getElementById("resourceFiles"),
+  document.getElementById("resourceText"),
+  document.getElementById("resourceStatus")
+));
+
+document.getElementById("analyzeBtn").addEventListener("click", analyze);
+document.getElementById("clearBtn").addEventListener("click", clearAll);
+</script>
+</body>
+</html>
