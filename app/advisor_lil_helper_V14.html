@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>advisor_lil_helper_V14</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#131a33; --text:#eef3ff; --muted:#a9bbde; --accent:#7bc0ff; --ok:#5cdf91; --warn:#ffd074; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,sans-serif; }
+    .wrap { max-width:1200px; margin:0 auto; padding:12px 20px 20px; }
+    .panel { background:var(--panel); border-radius:12px; padding:14px; margin-bottom:12px; }
+    h1,h2,h3 { margin:0 0 8px 0; }
+    h1 { font-size: 28px; }
+    textarea { width:100%; min-height:280px; resize:vertical; background:#0d1430; color:var(--text); border:1px solid #33436f; border-radius:10px; padding:10px; }
+    button { background:var(--accent); color:#081629; border:0; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .kpi { background:#0d1430; border-radius:10px; padding:8px 10px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .tag { display:inline-block; font-size:12px; margin:2px; padding:4px 8px; border-radius:999px; border:1px solid #304372; background:#1c284f; color:var(--muted); }
+    .ok { color:var(--ok); } .warn { color:var(--warn); }
+    pre { white-space:pre-wrap; background:#0d1430; border:1px solid #33436f; border-radius:10px; padding:10px; max-height:640px; overflow:auto; }
+    @media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>advisor_lil_helper_V14</h1>
+
+  <section class="panel">
+    <h2>Student Audit / Transcript</h2>
+    <textarea id="studentText" placeholder="Paste one student's transcript/audit text here."></textarea>
+    <div class="row" style="margin-top:8px;">
+      <button id="analyzeBtn">Analyze for PDF</button>
+      <button id="clearBtn">Clear</button>
+      <span id="status"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="row">
+      <div class="kpi">Student Type: <strong id="studentType">—</strong></div>
+      <div class="kpi">World Cultures: <strong id="worldCultures">—</strong></div>
+      <div class="kpi">Terms Found: <strong id="termCount">0</strong></div>
+      <div class="kpi">Courses Found: <strong id="courseCount">0</strong></div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="panel">
+      <h3>Detected Profile</h3>
+      <div><strong>Major(s)</strong><div id="majors"></div></div>
+      <div><strong>Minor(s)</strong><div id="minors"></div></div>
+      <div><strong>World Cultures Evidence</strong><div id="wcEvidence"></div></div>
+      <div><strong>Elective Candidates</strong><div id="electives"></div></div>
+    </section>
+    <section class="panel">
+      <h3>PDF Fill Output</h3>
+      <pre id="output"></pre>
+    </section>
+  </div>
+</div>
+
+<script>
+const COURSE_RE = /\b([A-Z]{2,4})[-\s]?([0-9]{3}[A-Z]?)\b(?:\s*[-:]\s*([^|\t]+))?/;
+const TERM_LABEL_PATTERNS = [/(fall|spring|summer|winter)\s*(20\d{2})/i,/(20\d{2})\s*(fall|spring|summer|winter)/i,/\b(FA|SP|SU|WI)\s*-?\s*(\d{2})\b/i];
+const STATUS_HOLD_PATTERNS = [/\bin progress\b/i,/\bplanned\b/i,/\bwithdrawn\b/i,/\bwd\b/i,/\bwaived\b/i,/\btransfer pending\b/i];
+const GENED_MARKERS = ["gen ed","general education","montclair core","world cultures","quantitative reasoning"];
+const SEEDS_MARKERS = ["seeds","social justice","equity","inclusion","diversity","community engaged"];
+const WC_KEYWORDS = ["world cultures","global cultures","cultural anthropology","international studies","non-western","diaspora","latin american","african","asian"];
+
+const CATEGORY_HINTS = {
+  "Writing": ["writing","english composition","first year writing","composition"],
+  "Math": ["math","statistics","quantitative","calculus","algebra"],
+  "Science": ["biology","chemistry","physics","lab","geology"],
+  "Humanities": ["history","philosophy","literature","religion","arts"],
+  "Social Science": ["psych","sociology","political","economics","anthropology"],
+  "World Cultures": ["world cultures","global","culture","international","anthropology"]
+};
+
+const PROGRAM_MAP = {
+  "Gen Ed": [
+    { id:"WR1", label:"Writing I", bucket:"Writing", prereq:[] },
+    { id:"WR2", label:"Writing II", bucket:"Writing", prereq:["WR1"] },
+    { id:"QR", label:"Quantitative/Math", bucket:"Math", prereq:[] },
+    { id:"SCI1", label:"Science I (with lab if required)", bucket:"Science", prereq:[] },
+    { id:"SCI2", label:"Science II", bucket:"Science", prereq:["SCI1"] },
+    { id:"HUM1", label:"Humanities I", bucket:"Humanities", prereq:[] },
+    { id:"HUM2", label:"Humanities II", bucket:"Humanities", prereq:["HUM1"] },
+    { id:"SS1", label:"Social Science I", bucket:"Social Science", prereq:[] },
+    { id:"SS2", label:"Social Science II", bucket:"Social Science", prereq:["SS1"] },
+    { id:"WC", label:"World Cultures", bucket:"World Cultures", prereq:[] }
+  ],
+  "SEEDS": [
+    { id:"WR1", label:"Writing I", bucket:"Writing", prereq:[] },
+    { id:"WR2", label:"Writing II", bucket:"Writing", prereq:["WR1"] },
+    { id:"QR", label:"Quantitative/Math", bucket:"Math", prereq:[] },
+    { id:"SCI1", label:"Science", bucket:"Science", prereq:[] },
+    { id:"HUM1", label:"Humanities I", bucket:"Humanities", prereq:[] },
+    { id:"HUM2", label:"Humanities II", bucket:"Humanities", prereq:["HUM1"] },
+    { id:"SS1", label:"Social Science I", bucket:"Social Science", prereq:[] },
+    { id:"SS2", label:"Social Science II", bucket:"Social Science", prereq:["SS1"] },
+    { id:"WC", label:"World Cultures", bucket:"World Cultures", prereq:[] }
+  ]
+};
+PROGRAM_MAP.Unclear = PROGRAM_MAP["Gen Ed"];
+
+function normalizeText(t){ return (t||"").replace(/\r/g,"\n").replace(/[ \t]+/g," ").replace(/\n{3,}/g,"\n\n").trim(); }
+function uniq(arr){ return [...new Set(arr.filter(Boolean))]; }
+function seasonOrder(s){ return ({Winter:0,Spring:1,Summer:2,Fall:3})[s] ?? 9; }
+
+function parseTermLabel(line){
+  const l = line.trim();
+  let m = l.match(TERM_LABEL_PATTERNS[0]);
+  if (m) return `${m[1][0].toUpperCase()+m[1].slice(1).toLowerCase()} ${m[2]}`;
+  m = l.match(TERM_LABEL_PATTERNS[1]);
+  if (m) return `${m[2][0].toUpperCase()+m[2].slice(1).toLowerCase()} ${m[1]}`;
+  m = l.match(TERM_LABEL_PATTERNS[2]);
+  if (m) {
+    const map = {FA:"Fall",SP:"Spring",SU:"Summer",WI:"Winter"};
+    const yy = Number(m[2]);
+    const year = yy < 70 ? 2000 + yy : 1900 + yy;
+    return `${map[m[1].toUpperCase()]} ${year}`;
+  }
+  return null;
+}
+
+function sortTerms(terms){
+  return [...terms].sort((a,b)=>{
+    if(a==="Unassigned") return 1;
+    if(b==="Unassigned") return -1;
+    const [sa, ya] = a.split(" "), [sb, yb] = b.split(" ");
+    if(Number(ya)!==Number(yb)) return Number(ya)-Number(yb);
+    return seasonOrder(sa)-seasonOrder(sb);
+  });
+}
+
+function detectStudentType(text){
+  const t=text.toLowerCase(); let g=0,s=0;
+  GENED_MARKERS.forEach(m=>{ if(t.includes(m)) g+=2; });
+  SEEDS_MARKERS.forEach(m=>{ if(t.includes(m)) s+=2; });
+  if(/\bseed(s)?\b/.test(t)) s+=3;
+  if(/\bgen(eral)?\s*ed(ucation)?\b/.test(t)) g+=3;
+  if(s>g) return "SEEDS";
+  if(g>s) return "Gen Ed";
+  return "Unclear";
+}
+
+function extractProgramNames(text, rxList){
+  const out=[];
+  text.split("\n").forEach(line => rxList.forEach(rx => { const m=line.match(rx); if(m?.[1]) out.push(m[1].trim()); }));
+  return uniq(out);
+}
+
+function parseTimeline(text){
+  const lines = text.split("\n");
+  let current = "Unassigned";
+  const timeline = new Map([["Unassigned",[]]]);
+
+  function add(term, code, title, rawLine){
+    if(!timeline.has(term)) timeline.set(term, []);
+    const status = STATUS_HOLD_PATTERNS.some(rx => rx.test(rawLine)) ? "hold" : "mark";
+    const item = { code, title:(title||"").trim(), rawLine, status };
+    const key = `${item.code}|${item.title}|${item.status}`;
+    if(!timeline.get(term).some(c => `${c.code}|${c.title}|${c.status}` === key)) timeline.get(term).push(item);
+  }
+
+  for(const raw of lines){
+    const line = raw.trim();
+    if(!line) continue;
+    const pureTerm = parseTermLabel(line);
+    if(pureTerm && line.length <= 45){
+      current = pureTerm;
+      if(!timeline.has(current)) timeline.set(current, []);
+      continue;
+    }
+    const m = line.match(COURSE_RE);
+    if(m){
+      const inlineTerm = parseTermLabel(line) || current;
+      add(inlineTerm, `${m[1]} ${m[2]}`, m[3] || "", line);
+    }
+  }
+
+  const all=[];
+  timeline.forEach((arr, term) => arr.forEach(c => all.push({...c, term})));
+  return { timeline, allCourses: all };
+}
+
+function markFlaggedTimeline(timeline){
+  const seen = new Set();
+  const out = new Map();
+  for(const [term, courses] of timeline.entries()){
+    const rows=[];
+    for(const c of courses){
+      const key = `${c.code}|${c.title}`;
+      let mark = "[X]";
+      if(c.status === "hold") mark = "[ ]";
+      else if(seen.has(key)) mark = "[ ]";
+      else seen.add(key);
+      rows.push({...c, mark});
+    }
+    out.set(term, rows);
+  }
+  return out;
+}
+
+function mapCategories(courses){
+  const out={}; Object.keys(CATEGORY_HINTS).forEach(k=>out[k]=0);
+  courses.forEach(c=>{
+    const row = `${c.code} ${c.title}`.toLowerCase();
+    for(const [cat,hints] of Object.entries(CATEGORY_HINTS)){
+      if(hints.some(h=>row.includes(h))){ out[cat]+=1; return; }
+    }
+  });
+  return out;
+}
+
+function detectWorldCultures(courses, text){
+  const evidence=[];
+  courses.forEach(c=>{
+    const row = `${c.code} ${c.title}`.toLowerCase();
+    if(WC_KEYWORDS.some(k=>row.includes(k))) evidence.push(`${c.code}${c.title?` — ${c.title}`:""} (${c.term})`);
+  });
+  if(/world cultures[^\n]{0,70}(met|complete|completed|satisfied|done|taken)/i.test(text)) evidence.push("Requirement line indicates World Cultures is met");
+  return { completed:evidence.length>0, evidence:uniq(evidence) };
+}
+
+function detectElectives(courses, majors, minors){
+  const tokens = uniq([...majors,...minors].join(" ").toLowerCase().split(/[^a-z]+/).filter(w=>w.length>3));
+  return courses.filter(c=>{
+    const row = `${c.code} ${c.title}`.toLowerCase();
+    const majorRelated = tokens.some(t=>row.includes(t));
+    const genedLike = Object.values(CATEGORY_HINTS).flat().some(h=>row.includes(h));
+    return majorRelated || !genedLike;
+  }).map(c=>`${c.code}${c.title?` — ${c.title}`:""} (${c.term})`);
+}
+
+function buildProgramPlan(studentType, categoryCounts){
+  const blueprint = PROGRAM_MAP[studentType] || PROGRAM_MAP.Unclear;
+  const bucketCreditsUsed = {...categoryCounts};
+  const done = new Set();
+
+  for(const req of blueprint){
+    if((bucketCreditsUsed[req.bucket] || 0) > 0){
+      done.add(req.id);
+      bucketCreditsUsed[req.bucket] = Math.max(0, bucketCreditsUsed[req.bucket]-1);
+    }
+  }
+
+  const remaining = blueprint.filter(req => !done.has(req.id));
+  const semesters = ["Next Semester","Following Semester","Third Semester","Fourth Semester"].map(name => ({name, classes:[]}));
+
+  for(const sem of semesters){
+    let guard=0;
+    while(sem.classes.length < 3 && guard < 30){
+      guard += 1;
+      const candidate = remaining.find(r => r.prereq.every(p => done.has(p)));
+      if(!candidate) break;
+      sem.classes.push(candidate.label);
+      done.add(candidate.id);
+      remaining.splice(remaining.indexOf(candidate), 1);
+    }
+    while(sem.classes.length < 4) sem.classes.push("Major/Minor required course or sequencing prerequisite");
+    if(sem.classes.length < 5) sem.classes.push("Elective / credit completion slot");
+  }
+
+  return { remaining, semesters };
+}
+
+function renderTags(el, arr, fallback){
+  el.innerHTML = "";
+  if(!arr.length){ el.innerHTML = `<span class="tag">${fallback}</span>`; return; }
+  arr.forEach(v=>{ const s=document.createElement("span"); s.className="tag"; s.textContent=v; el.appendChild(s); });
+}
+
+function analyze(){
+  const text = normalizeText(document.getElementById('studentText').value);
+  if(!text){ const s=document.getElementById('status'); s.textContent='Paste student data first.'; s.className='warn'; return; }
+
+  const majors = extractProgramNames(text,[/(?:primary\s+)?major\s*[:\-]\s*(.+)/i,/program\s*[:\-]\s*(.+)/i,/second\s+major\s*[:\-]\s*(.+)/i]);
+  const minors = extractProgramNames(text,[/minor\s*[:\-]\s*(.+)/i,/secondary\s+minor\s*[:\-]\s*(.+)/i]);
+  const studentType = detectStudentType(text);
+  const { timeline, allCourses } = parseTimeline(text);
+  const flaggedTimeline = markFlaggedTimeline(timeline);
+  const markedCourses = allCourses.filter(c => !STATUS_HOLD_PATTERNS.some(rx => rx.test(c.rawLine)));
+  const worldCultures = detectWorldCultures(markedCourses, text);
+  const categoryCounts = mapCategories(markedCourses);
+  const electives = detectElectives(markedCourses, majors, minors);
+  const future = buildProgramPlan(studentType, categoryCounts);
+
+  document.getElementById('studentType').textContent = studentType;
+  document.getElementById('worldCultures').textContent = worldCultures.completed ? 'MET/DETECTED' : 'NOT FOUND';
+  document.getElementById('worldCultures').className = worldCultures.completed ? 'ok' : 'warn';
+  document.getElementById('termCount').textContent = String([...timeline.keys()].filter(t=>t!=='Unassigned').length || (timeline.get('Unassigned')?.length ? 1 : 0));
+  document.getElementById('courseCount').textContent = String(allCourses.length);
+
+  renderTags(document.getElementById('majors'), majors, 'No major detected');
+  renderTags(document.getElementById('minors'), minors, 'No minor detected');
+  renderTags(document.getElementById('wcEvidence'), worldCultures.evidence, 'No WC evidence');
+  renderTags(document.getElementById('electives'), electives, 'No elective candidates');
+
+  const orderedTerms = sortTerms([...flaggedTimeline.keys()]).filter(t => t !== 'Unassigned' || flaggedTimeline.get('Unassigned').length);
+  const out=[];
+  out.push(`STUDENT TYPE: ${studentType}`);
+  out.push(`WORLD CULTURES: ${worldCultures.completed ? 'MET' : 'MISSING / NOT CLEAR'}`);
+  out.push(`MAJOR(S): ${majors.join('; ') || 'None detected'}`);
+  out.push(`MINOR(S): ${minors.join('; ') || 'None detected'}`);
+  out.push('');
+  out.push('SEMESTER-BY-SEMESTER PDF FILL ([X] mark in PDF, [ ] do NOT mark):');
+  orderedTerms.forEach((term, i)=>{
+    out.push(`- Semester ${i+1} — ${term}`);
+    const rows = flaggedTimeline.get(term) || [];
+    if(!rows.length) out.push('  • [ ] (none)');
+    rows.forEach(c => out.push(`  • ${c.mark} ${c.code}${c.title ? ` — ${c.title}` : ''}`));
+  });
+
+  out.push('');
+  out.push('PROGRAM REQUIREMENTS STILL OPEN (estimate):');
+  if(future.remaining.length) future.remaining.forEach(r => out.push(`- ${r.label}`));
+  else out.push('- Core requirement sequence appears complete from parsed text.');
+
+  out.push('');
+  out.push('NEXT 4 SEMESTERS PLAN (4-5 classes each):');
+  future.semesters.forEach((sem, i)=>{
+    out.push(`- Plan Semester ${i+1} (${sem.name}):`);
+    sem.classes.forEach(c => out.push(`  • ${c}`));
+  });
+
+  out.push('');
+  out.push('ELECTIVES FOR OPEN SLOTS:');
+  if(electives.length) electives.forEach(e => out.push(`  • ${e}`));
+  else out.push('  • (none found)');
+
+  document.getElementById('output').textContent = out.join('\n');
+  const s=document.getElementById('status'); s.textContent='Analysis complete.'; s.className='ok';
+}
+
+function clearAll(){
+  document.getElementById('studentText').value='';
+  document.getElementById('output').textContent='';
+  document.getElementById('studentType').textContent='—';
+  document.getElementById('worldCultures').textContent='—';
+  document.getElementById('termCount').textContent='0';
+  document.getElementById('courseCount').textContent='0';
+  ['majors','minors','wcEvidence','electives'].forEach(id => document.getElementById(id).innerHTML='');
+  const s=document.getElementById('status'); s.textContent=''; s.className='';
+}
+
+document.getElementById('analyzeBtn').addEventListener('click', analyze);
+document.getElementById('clearBtn').addEventListener('click', clearAll);
+</script>
+</body>
+</html>

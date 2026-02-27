@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>advisor_lil_helper_V13</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#131a33; --text:#eef3ff; --muted:#a9bbde; --accent:#7bc0ff; --ok:#5cdf91; --warn:#ffd074; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:system-ui,sans-serif; }
+    .wrap { max-width:1200px; margin:0 auto; padding:20px; }
+    .panel { background:var(--panel); border-radius:12px; padding:14px; margin-bottom:14px; }
+    h1,h2,h3 { margin:0 0 10px 0; }
+    textarea { width:100%; min-height:250px; resize:vertical; background:#0d1430; color:var(--text); border:1px solid #33436f; border-radius:10px; padding:10px; }
+    input[type="file"] { width:100%; margin-bottom:8px; }
+    button { background:var(--accent); color:#081629; border:0; border-radius:10px; padding:10px 14px; font-weight:700; cursor:pointer; }
+    .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+    .kpi { background:#0d1430; border-radius:10px; padding:8px 10px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    .tag { display:inline-block; font-size:12px; margin:2px; padding:4px 8px; border-radius:999px; border:1px solid #304372; background:#1c284f; color:var(--muted); }
+    .ok { color:var(--ok); } .warn { color:var(--warn); }
+    pre { white-space:pre-wrap; background:#0d1430; border:1px solid #33436f; border-radius:10px; padding:10px; max-height:620px; overflow:auto; }
+    @media (max-width:900px) { .grid { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <h1>advisor_lil_helper_V13 — PDF Fill + Semester Planner</h1>
+  <p>One input only. Paste one student audit/transcript text, then click <strong>Analyze for PDF</strong>.</p>
+
+  <section class="panel">
+    <h2>Student Audit / Transcript Input</h2>
+    <input id="studentFiles" type="file" multiple accept=".txt,.csv,.md,.pdf" />
+    <textarea id="studentText" placeholder="Paste student text here. Include terms like Fall 2023 / Spring 2024 when available."></textarea>
+    <div class="row" style="margin-top:8px;">
+      <button id="loadBtn">Load Selected Files</button>
+      <button id="analyzeBtn">Analyze for PDF</button>
+      <button id="clearBtn">Clear</button>
+      <span id="status"></span>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="row">
+      <div class="kpi">Student Type: <strong id="studentType">—</strong></div>
+      <div class="kpi">World Cultures: <strong id="worldCultures">—</strong></div>
+      <div class="kpi">Terms Found: <strong id="termCount">0</strong></div>
+      <div class="kpi">Courses Found: <strong id="courseCount">0</strong></div>
+    </div>
+  </section>
+
+  <div class="grid">
+    <section class="panel">
+      <h3>Detected Profile</h3>
+      <div><strong>Major(s)</strong><div id="majors"></div></div>
+      <div><strong>Minor(s)</strong><div id="minors"></div></div>
+      <div><strong>World Cultures Evidence</strong><div id="wcEvidence"></div></div>
+      <div><strong>Elective Candidates</strong><div id="electives"></div></div>
+    </section>
+    <section class="panel">
+      <h3>PDF Fill Output</h3>
+      <pre id="output"></pre>
+    </section>
+  </div>
+</div>
+
+<script>
+const COURSE_RE = /\b([A-Z]{2,4})[-\s]?([0-9]{3}[A-Z]?)\b(?:\s*[-:]\s*([^|\t]+))?/;
+const WC_KEYWORDS = ["world cultures","global cultures","cultural anthropology","international studies","non-western","diaspora","latin american","african","asian"];
+const GENED_MARKERS = ["gen ed","general education","montclair core","world cultures","quantitative reasoning"];
+const SEEDS_MARKERS = ["seeds","social justice","equity","inclusion","diversity","community engaged"];
+const CATEGORY_HINTS = {
+  "World Cultures": ["world cultures","global","culture","international","anthropology"],
+  "Writing": ["writing","english composition","first year writing"],
+  "Math": ["math","statistics","quantitative","calculus","algebra"],
+  "Science": ["biology","chemistry","physics","lab","geology"],
+  "Humanities": ["history","philosophy","literature","religion","arts"],
+  "Social Science": ["psych","sociology","political","economics","anthropology"]
+};
+const TERM_LABEL_PATTERNS = [
+  /(fall|spring|summer|winter)\s*(20\d{2})/i,
+  /(20\d{2})\s*(fall|spring|summer|winter)/i,
+  /\b(FA|SP|SU|WI)\s*-?\s*(\d{2})\b/i
+];
+
+function normalizeText(t){ return (t||"").replace(/\r/g,"\n").replace(/[ \t]+/g," ").replace(/\n{3,}/g,"\n\n").trim(); }
+function uniq(arr){ return [...new Set(arr.filter(Boolean))]; }
+function seasonOrder(s){ return ({Winter:0,Spring:1,Summer:2,Fall:3})[s] ?? 9; }
+
+function parseTermLabel(line){
+  const l = line.trim();
+  let m = l.match(TERM_LABEL_PATTERNS[0]);
+  if (m) return `${m[1][0].toUpperCase()+m[1].slice(1).toLowerCase()} ${m[2]}`;
+  m = l.match(TERM_LABEL_PATTERNS[1]);
+  if (m) return `${m[2][0].toUpperCase()+m[2].slice(1).toLowerCase()} ${m[1]}`;
+  m = l.match(TERM_LABEL_PATTERNS[2]);
+  if (m) {
+    const map = {FA:"Fall",SP:"Spring",SU:"Summer",WI:"Winter"};
+    const yy = Number(m[2]);
+    const year = yy < 70 ? 2000 + yy : 1900 + yy;
+    return `${map[m[1].toUpperCase()]} ${year}`;
+  }
+  return null;
+}
+
+function sortTerms(terms){
+  return [...terms].sort((a,b)=>{
+    if(a==="Unassigned") return 1;
+    if(b==="Unassigned") return -1;
+    const [sa, ya] = a.split(" ");
+    const [sb, yb] = b.split(" ");
+    const nyA = Number(ya||0), nyB = Number(yb||0);
+    if(nyA!==nyB) return nyA-nyB;
+    return seasonOrder(sa)-seasonOrder(sb);
+  });
+}
+
+function detectStudentType(text){
+  const t=text.toLowerCase(); let g=0,s=0;
+  GENED_MARKERS.forEach(m=>{ if(t.includes(m)) g+=2; });
+  SEEDS_MARKERS.forEach(m=>{ if(t.includes(m)) s+=2; });
+  if(/\bseed(s)?\b/.test(t)) s+=3;
+  if(/\bgen(eral)?\s*ed(ucation)?\b/.test(t)) g+=3;
+  if(s>g) return "SEEDS";
+  if(g>s) return "Gen Ed";
+  return "Unclear";
+}
+
+function extractProgramNames(text, rxList){
+  const out=[];
+  text.split("\n").forEach(line=> rxList.forEach(rx=> { const m=line.match(rx); if(m?.[1]) out.push(m[1].trim()); }));
+  return uniq(out);
+}
+
+function parseTimeline(text){
+  const lines = text.split("\n");
+  let current = "Unassigned";
+  const timeline = new Map([["Unassigned",[]]]);
+
+  function add(term, code, title, line){
+    if(!timeline.has(term)) timeline.set(term, []);
+    const item = { code, title:(title||"").trim(), line };
+    const key = `${item.code}|${item.title}`;
+    if(!timeline.get(term).some(c=>`${c.code}|${c.title}`===key)) timeline.get(term).push(item);
+  }
+
+  for(const raw of lines){
+    const line = raw.trim();
+    if(!line) continue;
+
+    const pureTerm = parseTermLabel(line);
+    if(pureTerm && line.length <= 45){
+      current = pureTerm;
+      if(!timeline.has(current)) timeline.set(current, []);
+      continue;
+    }
+
+    const inline = line.match(COURSE_RE);
+    if(inline){
+      const inlineTerm = parseTermLabel(line) || current;
+      add(inlineTerm, `${inline[1]} ${inline[2]}`, inline[3] || "", line);
+    }
+  }
+
+  const allCourses = [];
+  timeline.forEach((arr, term)=> arr.forEach(c => allCourses.push({...c, term})));
+  return { timeline, allCourses };
+}
+
+function detectWorldCultures(courses, text){
+  const evidence=[];
+  courses.forEach(c=>{
+    const row = `${c.code} ${c.title}`.toLowerCase();
+    if(WC_KEYWORDS.some(k=>row.includes(k))) evidence.push(`${c.code}${c.title?` — ${c.title}`:""} (${c.term})`);
+  });
+  if(/world cultures[^\n]{0,70}(met|complete|completed|satisfied|done|taken)/i.test(text)) evidence.push("Requirement line indicates World Cultures is met");
+  return { completed:evidence.length>0, evidence:uniq(evidence) };
+}
+
+function mapCategories(courses){
+  const out={}; Object.keys(CATEGORY_HINTS).forEach(k=>out[k]=[]); out.Unmapped=[];
+  courses.forEach(c=>{
+    const row = `${c.code} ${c.title}`.toLowerCase();
+    let done=false;
+    Object.entries(CATEGORY_HINTS).forEach(([cat,hints])=>{
+      if(!done && hints.some(h=>row.includes(h))){ out[cat].push(c); done=true; }
+    });
+    if(!done) out.Unmapped.push(c);
+  });
+  return out;
+}
+
+function detectElectives(courses, majors, minors){
+  const tokens = uniq([...majors, ...minors].join(" ").toLowerCase().split(/[^a-z]+/).filter(w=>w.length>3));
+  return courses.filter(c=>{
+    const row = `${c.code} ${c.title}`.toLowerCase();
+    const majorRelated = tokens.some(t=>row.includes(t));
+    const genedLike = Object.values(CATEGORY_HINTS).flat().some(h=>row.includes(h));
+    return majorRelated || !genedLike;
+  }).map(c=>`${c.code}${c.title?` — ${c.title}`:""} (${c.term})`);
+}
+
+function renderTags(el, arr, fallback){
+  el.innerHTML = "";
+  if(!arr.length){ el.innerHTML = `<span class="tag">${fallback}</span>`; return; }
+  arr.forEach(v=>{ const s=document.createElement("span"); s.className="tag"; s.textContent=v; el.appendChild(s); });
+}
+
+function planningNotes(profile){
+  const r=[];
+  if(!profile.worldCultures.completed) r.push("Add 1 World Cultures class in next term.");
+  if(profile.counts.Writing===0) r.push("Add Writing requirement in next term.");
+  if(profile.counts.Math===0) r.push("Add Math/Quantitative requirement within next 2 terms.");
+  if(profile.electives.length<2) r.push("Review secondary major/minor classes for elective credit slots.");
+  if(!r.length) r.push("Core areas appear covered. Prioritize prerequisites + remaining credits.");
+  return r;
+}
+
+function buildPdfClickGuide(studentType, orderedTerms){
+  const lines = [];
+  lines.push("PDF CLICK/FILL GUIDE:");
+  lines.push(`1) Student Type box: mark ${studentType === "Unclear" ? "(review manually: Gen Ed vs SEEDS)" : studentType}.`);
+  lines.push("2) In the term table, fill each row with courses from the matching TERM block below.");
+  orderedTerms.forEach((term, i)=> lines.push(`   - Row Semester ${i+1}: copy courses under \"${term}\".`));
+  lines.push("3) Mark World Cultures status based on the WORLD CULTURES line.");
+  lines.push("4) Use ELECTIVES section to fill open elective slots.");
+  return lines;
+}
+
+async function readFileAsText(file){
+  if(file.name.toLowerCase().endsWith('.pdf')) return `\n[PDF attached: ${file.name}]\n(PDF text extraction is limited in-browser; paste extracted PDF text for best results.)\n`;
+  return await file.text();
+}
+
+async function loadFiles(){
+  const files=[...document.getElementById('studentFiles').files];
+  const status=document.getElementById('status');
+  if(!files.length){ status.textContent='No files selected.'; status.className='warn'; return; }
+  const chunks=[];
+  for(const f of files) chunks.push(`\n===== ${f.name} =====\n${await readFileAsText(f)}`);
+  const ta = document.getElementById('studentText');
+  ta.value = normalizeText(`${ta.value}\n${chunks.join('\n')}`);
+  status.textContent=`Loaded ${files.length} file(s)`;
+  status.className='ok';
+}
+
+function analyze(){
+  const text = normalizeText(document.getElementById('studentText').value);
+  if(!text){ const s=document.getElementById('status'); s.textContent='Paste or load student data first.'; s.className='warn'; return; }
+
+  const majors = extractProgramNames(text,[/(?:primary\s+)?major\s*[:\-]\s*(.+)/i,/program\s*[:\-]\s*(.+)/i,/second\s+major\s*[:\-]\s*(.+)/i]);
+  const minors = extractProgramNames(text,[/minor\s*[:\-]\s*(.+)/i,/secondary\s+minor\s*[:\-]\s*(.+)/i]);
+  const studentType = detectStudentType(text);
+  const { timeline, allCourses } = parseTimeline(text);
+  const worldCultures = detectWorldCultures(allCourses, text);
+  const electives = detectElectives(allCourses, majors, minors);
+  const categories = mapCategories(allCourses);
+  const counts = Object.fromEntries(Object.entries(categories).map(([k,v])=>[k,v.length]));
+
+  document.getElementById('studentType').textContent = studentType;
+  document.getElementById('worldCultures').textContent = worldCultures.completed ? 'MET/DETECTED' : 'NOT FOUND';
+  document.getElementById('worldCultures').className = worldCultures.completed ? 'ok' : 'warn';
+  document.getElementById('termCount').textContent = String(timeline.size - (timeline.get('Unassigned')?.length ? 0 : 1));
+  document.getElementById('courseCount').textContent = String(allCourses.length);
+
+  renderTags(document.getElementById('majors'), majors, 'No major detected');
+  renderTags(document.getElementById('minors'), minors, 'No minor detected');
+  renderTags(document.getElementById('wcEvidence'), worldCultures.evidence, 'No WC evidence');
+  renderTags(document.getElementById('electives'), electives, 'No elective candidates');
+
+  const orderedTerms = sortTerms([...timeline.keys()]).filter(t => t !== 'Unassigned' || timeline.get('Unassigned')?.length);
+  const out = [];
+  out.push(`STUDENT TYPE: ${studentType}`);
+  out.push(`WORLD CULTURES: ${worldCultures.completed ? 'MET' : 'MISSING / NOT CLEAR'}`);
+  out.push(`MAJOR(S): ${majors.join('; ') || 'None detected'}`);
+  out.push(`MINOR(S): ${minors.join('; ') || 'None detected'}`);
+  out.push('');
+  out.push('SEMESTER-BY-SEMESTER (X down these in the PDF term rows):');
+  orderedTerms.forEach((term, i)=>{
+    out.push(`- Semester ${i+1} — ${term}:`);
+    const list = timeline.get(term) || [];
+    if(!list.length) out.push('  • (no courses found)');
+    list.forEach(c=> out.push(`  • ${c.code}${c.title ? ` — ${c.title}` : ''}`));
+  });
+  out.push('');
+  out.push('REQUIREMENT QUICK COUNTS:');
+  Object.entries(counts).forEach(([k,v])=> out.push(`- ${k}: ${v}`));
+  out.push('');
+  out.push('ELECTIVES FOR OPEN SLOTS:');
+  if(electives.length) electives.forEach(e=> out.push(`  • ${e}`)); else out.push('  • (none found)');
+  out.push('');
+  buildPdfClickGuide(studentType, orderedTerms).forEach(line=> out.push(line));
+  out.push('');
+  out.push('NEXT-TERM PLAN:');
+  planningNotes({worldCultures, counts, electives}).forEach(x=> out.push(`  • ${x}`));
+
+  document.getElementById('output').textContent = out.join('\n');
+  const s=document.getElementById('status'); s.textContent='Analysis complete.'; s.className='ok';
+}
+
+function clearAll(){
+  document.getElementById('studentText').value='';
+  document.getElementById('output').textContent='';
+  document.getElementById('studentType').textContent='—';
+  document.getElementById('worldCultures').textContent='—';
+  document.getElementById('termCount').textContent='0';
+  document.getElementById('courseCount').textContent='0';
+  ['majors','minors','wcEvidence','electives'].forEach(id => document.getElementById(id).innerHTML='');
+  const s=document.getElementById('status'); s.textContent=''; s.className='';
+}
+
+document.getElementById('loadBtn').addEventListener('click', loadFiles);
+document.getElementById('analyzeBtn').addEventListener('click', analyze);
+document.getElementById('clearBtn').addEventListener('click', clearAll);
+</script>
+</body>
+</html>
